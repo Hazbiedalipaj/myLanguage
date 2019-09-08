@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\user1\Desktop\MyLanguage</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>11/25/2018 13:33:07</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>11/25/2018 13:33:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>11/30/2016 16:07:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>12/07/2016 11:45:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>12/06/2016 15:15:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>12/07/2016 11:49:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>12/06/2016 15:09:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>08/15/2017 14:12:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/05/2012 11:08:46</publishTime>
+    </File>
+    <File Include="bin/MyLanguage!!.dll">
+      <publishTime>12/16/2018 19:30:22</publishTime>
+    </File>
+    <File Include="bin/MyLanguage!!.pdb">
+      <publishTime>12/16/2018 19:30:22</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 21:33:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 15:50:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/10/2013 18:28:38</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>11/25/2018 13:32:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>11/25/2018 13:32:45</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>11/25/2018 13:32:17</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>11/25/2018 13:32:17</publishTime>
+    </File>
+    <File Include="fonts/albania.png">
+      <publishTime>11/25/2018 20:51:15</publishTime>
+    </File>
+    <File Include="fonts/china.png">
+      <publishTime>11/25/2018 20:51:20</publishTime>
+    </File>
+    <File Include="fonts/france.png">
+      <publishTime>11/25/2018 20:51:44</publishTime>
+    </File>
+    <File Include="fonts/germany.png">
+      <publishTime>11/25/2018 20:51:49</publishTime>
+    </File>
+    <File Include="fonts/italy.png">
+      <publishTime>11/25/2018 20:51:58</publishTime>
+    </File>
+    <File Include="fonts/korea.png">
+      <publishTime>11/25/2018 20:52:03</publishTime>
+    </File>
+    <File Include="fonts/russia.png">
+      <publishTime>11/25/2018 20:52:16</publishTime>
+    </File>
+    <File Include="fonts/spain.png">
+      <publishTime>11/25/2018 20:52:29</publishTime>
+    </File>
+    <File Include="fonts/turkey.png">
+      <publishTime>11/25/2018 20:52:33</publishTime>
+    </File>
+    <File Include="fonts/uk.png">
+      <publishTime>11/25/2018 20:52:41</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/25/2018 13:32:17</publishTime>
+    </File>
+    <File Include="img/arush.jpg">
+      <publishTime>12/08/2018 15:13:12</publishTime>
+    </File>
+    <File Include="img/balkoni.jpg">
+      <publishTime>12/10/2018 15:51:16</publishTime>
+    </File>
+    <File Include="img/blouza.jpeg">
+      <publishTime>12/10/2018 17:44:30</publishTime>
+    </File>
+    <File Include="img/duck.jpg">
+      <publishTime>12/10/2018 15:18:36</publishTime>
+    </File>
+    <File Include="img/eagle2.jpg">
+      <publishTime>12/09/2018 16:25:30</publishTime>
+    </File>
+    <File Include="img/fenster.jpg">
+      <publishTime>12/12/2018 21:38:09</publishTime>
+    </File>
+    <File Include="img/fousta.jpg">
+      <publishTime>12/10/2018 17:45:48</publishTime>
+    </File>
+    <File Include="img/großmutter.jpg">
+      <publishTime>12/11/2018 22:14:28</publishTime>
+    </File>
+    <File Include="img/Heung-min-Son-925466.jpg">
+      <publishTime>12/09/2018 16:17:09</publishTime>
+    </File>
+    <File Include="img/images.jpg">
+      <publishTime>12/10/2018 16:48:24</publishTime>
+    </File>
+    <File Include="img/kouneli.jpg">
+      <publishTime>12/10/2018 15:39:05</publishTime>
+    </File>
+    <File Include="img/küche.jpg">
+      <publishTime>12/12/2018 21:38:14</publishTime>
+    </File>
+    <File Include="img/L-escrime-l-art-de-la-touche.jpg">
+      <publishTime>12/09/2018 16:17:09</publishTime>
+    </File>
+    <File Include="img/leaf.jpg">
+      <publishTime>12/10/2018 15:18:36</publishTime>
+    </File>
+    <File Include="img/livre.jpg">
+      <publishTime>12/09/2018 16:07:17</publishTime>
+    </File>
+    <File Include="img/louloudia.jpg">
+      <publishTime>12/10/2018 11:08:07</publishTime>
+    </File>
+    <File Include="img/lule.jpg">
+      <publishTime>12/08/2018 09:27:14</publishTime>
+    </File>
+    <File Include="img/mace.jpg">
+      <publishTime>12/08/2018 09:42:25</publishTime>
+    </File>
+    <File Include="img/orig.jpg">
+      <publishTime>12/10/2018 17:55:38</publishTime>
+    </File>
+    <File Include="img/parathiro.jpg">
+      <publishTime>12/10/2018 15:51:16</publishTime>
+    </File>
+    <File Include="img/pelikanos.jpg">
+      <publishTime>12/09/2018 16:25:30</publishTime>
+    </File>
+    <File Include="img/PER.707073.jpg">
+      <publishTime>12/10/2018 17:09:39</publishTime>
+    </File>
+    <File Include="img/pink.jpg">
+      <publishTime>12/10/2018 11:15:04</publishTime>
+    </File>
+    <File Include="img/plate.jpg">
+      <publishTime>12/10/2018 15:18:36</publishTime>
+    </File>
+    <File Include="img/qen.png">
+      <publishTime>12/08/2018 09:42:28</publishTime>
+    </File>
+    <File Include="img/qengj.jpg">
+      <publishTime>12/08/2018 15:13:08</publishTime>
+    </File>
+    <File Include="img/Samsung.jpg">
+      <publishTime>12/10/2018 17:09:33</publishTime>
+    </File>
+    <File Include="img/schwester.jpg">
+      <publishTime>12/11/2018 22:15:02</publishTime>
+    </File>
+    <File Include="img/see.jpg">
+      <publishTime>12/11/2018 22:15:05</publishTime>
+    </File>
+    <File Include="img/sheep.jpg">
+      <publishTime>12/10/2018 15:18:36</publishTime>
+    </File>
+    <File Include="img/skilo.jpg">
+      <publishTime>12/10/2018 15:39:05</publishTime>
+    </File>
+    <File Include="img/strand.jpg">
+      <publishTime>12/11/2018 22:15:15</publishTime>
+    </File>
+    <File Include="img/table.JPG">
+      <publishTime>12/10/2018 15:18:36</publishTime>
+    </File>
+    <File Include="img/top.jpg">
+      <publishTime>12/08/2018 09:25:45</publishTime>
+    </File>
+    <File Include="img/tree.jpg">
+      <publishTime>12/10/2018 15:18:36</publishTime>
+    </File>
+    <File Include="img/valitsa.jpg">
+      <publishTime>12/09/2018 16:07:11</publishTime>
+    </File>
+    <File Include="img/αλεπού.jpg">
+      <publishTime>12/12/2018 22:50:04</publishTime>
+    </File>
+    <File Include="img/αρχείο λήψης.jpg">
+      <publishTime>12/10/2018 16:59:12</publishTime>
+    </File>
+    <File Include="img/βιβλίο.jpg">
+      <publishTime>12/12/2018 22:50:04</publishTime>
+    </File>
+    <File Include="img/βουνό.jpg">
+      <publishTime>12/12/2018 21:38:44</publishTime>
+    </File>
+    <File Include="img/γάτα.jpg">
+      <publishTime>12/12/2018 21:38:41</publishTime>
+    </File>
+    <File Include="img/γαιδουρι.jpg">
+      <publishTime>12/10/2018 16:48:24</publishTime>
+    </File>
+    <File Include="img/γκαράζ.jpg">
+      <publishTime>12/12/2018 22:49:56</publishTime>
+    </File>
+    <File Include="img/γοβα.jpeg">
+      <publishTime>12/10/2018 11:02:19</publishTime>
+    </File>
+    <File Include="img/δασος.jpg">
+      <publishTime>12/10/2018 11:08:03</publishTime>
+    </File>
+    <File Include="img/κήπος.jpg">
+      <publishTime>12/12/2018 22:49:57</publishTime>
+    </File>
+    <File Include="img/κότα.jpg">
+      <publishTime>12/12/2018 21:38:49</publishTime>
+    </File>
+    <File Include="img/καταρράκτης.jpg">
+      <publishTime>12/12/2018 21:38:47</publishTime>
+    </File>
+    <File Include="img/κορονα.jpg">
+      <publishTime>12/10/2018 16:02:08</publishTime>
+    </File>
+    <File Include="img/κοτα.jpg">
+      <publishTime>12/10/2018 17:55:38</publishTime>
+    </File>
+    <File Include="img/μωβ.jpg">
+      <publishTime>12/10/2018 11:15:04</publishTime>
+    </File>
+    <File Include="img/ομπρέλα.jpg">
+      <publishTime>12/12/2018 22:49:58</publishTime>
+    </File>
+    <File Include="img/πάντα.jpg">
+      <publishTime>12/12/2018 22:49:58</publishTime>
+    </File>
+    <File Include="img/πορτοκαλή.png">
+      <publishTime>12/10/2018 17:38:46</publishTime>
+    </File>
+    <File Include="img/σκάλα.jpg">
+      <publishTime>12/12/2018 21:38:55</publishTime>
+    </File>
+    <File Include="img/υπόγειο.jpg">
+      <publishTime>12/12/2018 21:38:55</publishTime>
+    </File>
+    <File Include="img/φορεμα.jpeg">
+      <publishTime>12/10/2018 11:02:24</publishTime>
+    </File>
+    <File Include="img/χτενα.jpg">
+      <publishTime>12/10/2018 16:02:03</publishTime>
+    </File>
+    <File Include="Index/agkura.jpg">
+      <publishTime>12/13/2018 21:09:52</publishTime>
+    </File>
+    <File Include="Index/agkura11.jpg">
+      <publishTime>12/13/2018 21:54:09</publishTime>
+    </File>
+    <File Include="Index/berolino.jpg">
+      <publishTime>12/13/2018 21:09:52</publishTime>
+    </File>
+    <File Include="Index/londino.jpg">
+      <publishTime>12/13/2018 22:02:33</publishTime>
+    </File>
+    <File Include="Index/madriti.jpg">
+      <publishTime>12/13/2018 21:09:52</publishTime>
+    </File>
+    <File Include="Index/mosxa.jpg">
+      <publishTime>12/13/2018 21:09:52</publishTime>
+    </File>
+    <File Include="Index/parisi.jpg">
+      <publishTime>12/13/2018 21:09:52</publishTime>
+    </File>
+    <File Include="Index/parisi11.jpg">
+      <publishTime>12/13/2018 21:49:59</publishTime>
+    </File>
+    <File Include="Index/pekino.jpg">
+      <publishTime>12/13/2018 21:55:57</publishTime>
+    </File>
+    <File Include="Index/polla.jpg">
+      <publishTime>12/13/2018 22:05:53</publishTime>
+    </File>
+    <File Include="Index/romi.jpg">
+      <publishTime>12/13/2018 21:09:52</publishTime>
+    </File>
+    <File Include="Index/seoul.jpg">
+      <publishTime>12/13/2018 21:09:52</publishTime>
+    </File>
+    <File Include="Index/tirana.jpg">
+      <publishTime>12/13/2018 21:09:52</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>11/25/2018 13:32:45</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>11/25/2018 13:32:41</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>11/25/2018 13:32:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>11/25/2018 13:32:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>11/25/2018 13:32:47</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>11/25/2018 13:33:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>11/25/2018 13:33:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>11/25/2018 13:33:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>11/25/2018 13:33:02</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>11/25/2018 13:32:57</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>11/25/2018 13:33:00</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>11/25/2018 13:33:00</publishTime>
+    </File>
+    <File Include="Views/Glosses/Agglika.cshtml">
+      <publishTime>12/15/2018 17:23:50</publishTime>
+    </File>
+    <File Include="Views/Glosses/Albanika.cshtml">
+      <publishTime>12/15/2018 17:32:58</publishTime>
+    </File>
+    <File Include="Views/Glosses/Gallika.cshtml">
+      <publishTime>12/15/2018 17:38:55</publishTime>
+    </File>
+    <File Include="Views/Glosses/Germanika.cshtml">
+      <publishTime>12/15/2018 17:41:01</publishTime>
+    </File>
+    <File Include="Views/Glosses/Ispanika.cshtml">
+      <publishTime>12/15/2018 17:40:02</publishTime>
+    </File>
+    <File Include="Views/Glosses/Italika.cshtml">
+      <publishTime>12/15/2018 17:43:35</publishTime>
+    </File>
+    <File Include="Views/Glosses/Kinezika.cshtml">
+      <publishTime>12/15/2018 17:46:03</publishTime>
+    </File>
+    <File Include="Views/Glosses/Koreatika.cshtml">
+      <publishTime>12/15/2018 17:48:28</publishTime>
+    </File>
+    <File Include="Views/Glosses/Rosika.cshtml">
+      <publishTime>12/15/2018 17:50:33</publishTime>
+    </File>
+    <File Include="Views/Glosses/Tourkika.cshtml">
+      <publishTime>12/15/2018 17:55:45</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>12/12/2018 19:25:04</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>12/09/2018 12:28:09</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>12/14/2018 21:02:19</publishTime>
+    </File>
+    <File Include="Views/Home/Test.cshtml">
+      <publishTime>12/14/2018 21:08:47</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>11/25/2018 13:32:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>12/07/2018 19:28:52</publishTime>
+    </File>
+    <File Include="Views/Test/Agglika.cshtml">
+      <publishTime>12/15/2018 13:03:32</publishTime>
+    </File>
+    <File Include="Views/Test/Alvanika.cshtml">
+      <publishTime>12/12/2018 21:58:05</publishTime>
+    </File>
+    <File Include="Views/Test/Gallika.cshtml">
+      <publishTime>12/12/2018 21:58:14</publishTime>
+    </File>
+    <File Include="Views/Test/Germanika.cshtml">
+      <publishTime>12/12/2018 21:39:57</publishTime>
+    </File>
+    <File Include="Views/Test/Ispanika.cshtml">
+      <publishTime>12/12/2018 21:58:36</publishTime>
+    </File>
+    <File Include="Views/Test/Italika.cshtml">
+      <publishTime>12/12/2018 21:58:45</publishTime>
+    </File>
+    <File Include="Views/Test/Kinezika.cshtml">
+      <publishTime>12/12/2018 22:57:25</publishTime>
+    </File>
+    <File Include="Views/Test/Koreatika.cshtml">
+      <publishTime>12/12/2018 21:58:53</publishTime>
+    </File>
+    <File Include="Views/Test/Rosika.cshtml">
+      <publishTime>12/12/2018 21:59:00</publishTime>
+    </File>
+    <File Include="Views/Test/Tourkika.cshtml">
+      <publishTime>12/12/2018 21:59:08</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/25/2018 13:32:17</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>12/08/2018 11:16:11</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/16/2018 19:30:44</publishTime>
+    </File>
+    <File Include="xwres/albania/gjirokaster.jpg">
+      <publishTime>12/15/2018 17:23:08</publishTime>
+    </File>
+    <File Include="xwres/albania/Kalaja_e_Krujës-Krujë.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/albania/Kalaja_e_Rozafës-Shkodër.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/china/forbidden_city.jpg">
+      <publishTime>12/13/2018 22:28:25</publishTime>
+    </File>
+    <File Include="xwres/china/great_wall_of_china.jpg">
+      <publishTime>12/13/2018 22:28:25</publishTime>
+    </File>
+    <File Include="xwres/china/longji_terraces.jpg">
+      <publishTime>12/13/2018 22:28:25</publishTime>
+    </File>
+    <File Include="xwres/england/big ben.jpg">
+      <publishTime>12/13/2018 22:28:26</publishTime>
+    </File>
+    <File Include="xwres/england/buckingham.jpg">
+      <publishTime>12/13/2018 22:28:26</publishTime>
+    </File>
+    <File Include="xwres/england/stonehenge.jpg">
+      <publishTime>12/13/2018 22:28:26</publishTime>
+    </File>
+    <File Include="xwres/gallia/france efel.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/gallia/france-louvre-museum-2.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/gallia/france-panagia-ton-parision.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/germany/brandenburg_gate.jpg">
+      <publishTime>12/13/2018 22:28:26</publishTime>
+    </File>
+    <File Include="xwres/germany/germany.jpg">
+      <publishTime>12/15/2018 17:23:27</publishTime>
+    </File>
+    <File Include="xwres/germany/old_town_hall_bamberg.jpg">
+      <publishTime>12/13/2018 22:28:26</publishTime>
+    </File>
+    <File Include="xwres/italy/colosseum-italy.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/italy/pisa-italy.jpeg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/italy/venetia-italy.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/korea/andong.jpg">
+      <publishTime>12/13/2018 22:28:26</publishTime>
+    </File>
+    <File Include="xwres/korea/gyeongbokgung palace.jpg">
+      <publishTime>12/13/2018 22:28:26</publishTime>
+    </File>
+    <File Include="xwres/korea/jindo_and_modo.jpg">
+      <publishTime>12/13/2018 22:28:26</publishTime>
+    </File>
+    <File Include="xwres/russia/babushka.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/russia/hermitage_museum russia.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/russia/kokkini platia russia.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/spain/alhambra.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/spain/el_escorial.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/spain/sagrada_familia.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/tourkey/ephesus-turkey.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/tourkey/sumela-monastery-turkey.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+    <File Include="xwres/tourkey/turkey-aya-sofya.jpg">
+      <publishTime>12/14/2018 18:10:16</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
