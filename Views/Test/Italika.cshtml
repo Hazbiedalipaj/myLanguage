@@ -1,0 +1,241 @@
+﻿
+@model MyLanguage__.Models.Test
+@{
+    ViewBag.Title = "Italika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<html>
+<head>
+    <style>
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 50px;
+            font-style: italic;
+        }
+        #quiz {
+            margin-left: 10px;
+            background: #d2def2;
+            padding: 20px 30px 20px 30px;
+            width: 100%;
+            border-radius: 20px;
+            float: left;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        #after_submit {
+            visibility: hidden;
+            background: #ff5459;
+            padding: 14px 20px 14px 20px;
+            width: 400px;
+            border-radius: 20px;
+            float: left;
+            margin-left: 20px;
+            font-size: 30px;
+        }
+
+        #textbox {
+            height: 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            padding-left: 5px;
+        }
+
+        #button {
+            background: green;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            font-size: 16px;
+            transition-duration: .5s;
+            margin-top: 15px
+        }
+
+            #button:hover {
+                background: white;
+                border: 1px solid green;
+                color: black;
+                cursor: pointer;
+            }
+
+        #mc {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <form id="quiz" name="quiz">
+        <br />
+        <p><b>1. Γράψε την λέξη "Καλημέρα" στα ιταλικά</b></p>
+        <input id="textbox" type="text" name="question1" /><br /><br />
+
+        <p><b>2. Πώς είναι το "Χρόνια πολλά!" στα ιταλικά;</b></p><br />
+        <input type="radio" id="mc" name="question2" value="Tanti auguri" />Tanti auguri<br>
+        <input type="radio" id="mc" name="question2" value="Buon Anno!" />Buon Anno!<br>
+        <input type="radio" id="mc" name="question2" value="Congratulazioni " />Congratulazioni <br><br />
+
+        <p><b>3. Τι σημαίνει "il cane";</b></p><br />
+        <input type="radio" id="mc" name="question3" value="kouneli" /><img src="~/img/kouneli.jpg" style="width:180px;height:160px;" />
+        <input type="radio" id="mc" name="question3" value="skilo" /><img src="~/img/skilo.jpg" style="width:170px;height:170px;" /><br><br />
+
+        <p><b>4. Τι ώρα είναι το "Due meno dieci";</b></p><br />
+        <input type="radio" id="mc" name="question4" value="2:00" />02:10<br>
+        <input type="radio" id="mc" name="question4" value="2:40" />02:00<br>
+        <input type="radio" id="mc" name="question4" value="01:50" />01:50<br><br />
+
+        <p><b>5. Γράψε την λέξη "Πουκάμισο" στα ιταλικά</b></p><br />
+        <input id="textbox" type="text" name="question5" /><br /><br />
+
+        <p><b>6. Τι σημαίνει "il balcone";</b></p><br />
+        <input type="radio" id="mc" name="question6" value="balcone" /><img src="~/img/balkoni.jpg" style="width:160px;height:160px;" />
+        <input type="radio" id="mc" name="question6" value="parathiro" /><img src="~/img/parathiro.jpg" style="width:160px;height:160px;" /><br><br />
+
+        <p><b>7. Τι σημαίνει "L'ombrello";</b></p><br />
+        <input type="radio" id="mc" name="question7" value="Λάμπα" /> Λάμπα<br>
+        <input type="radio" id="mc" name="question7" value="Ομπρέλα" /> Ομπρέλα<br>
+        <input type="radio" id="mc" name="question7" value="Κλειδί" />Κλειδί<br><br />
+
+        <p><b>8. Μετάφρασε τη φράση "Andrò a casa mia"</b></p><br />
+        <input id="textbox" type="text" name="question8" /><br /><br />
+
+        <p><b>9. Τι σημαίνει "La corona";</b></p><br />
+        <input type="radio" id="mc" name="question9" value="La corona" /><img src="~/img/κορονα.jpg" style="width:160px;height:160px;" />
+        <input type="radio" id="mc" name="question9" value="htena" /><img src="~/img/χτενα.jpg" style="width:160px;height:160px;" /><br><br />
+
+        <p><b>10. Πώς είναι το ρήμα "Ζωγραφίζω" στα ιταλικά;</b></p><br />
+        <input id="textbox" type="text" name="question10" /><br /><br />
+
+        <input id="button" type="button" value="Τέλος" onclick="check();" />
+
+    </form>
+    <div id="after_submit">
+        <p id="message"></p>
+        <p id="number_correct"></p>
+        <img id="picture" />
+    </div>
+
+    <script type="text/javascript">
+        function check() {
+            var question1 = document.quiz.question1.value;
+            var question2 = document.quiz.question2.value;
+            var question3 = document.quiz.question3.value;
+            var question4 = document.quiz.question4.value;
+            var question5 = document.quiz.question5.value;
+            var question6 = document.quiz.question6.value;
+            var question7 = document.quiz.question7.value;
+            var question8 = document.quiz.question8.value;
+            var question9 = document.quiz.question9.value;
+            var question10 = document.quiz.question10.value;
+            var correct = 0;
+            if (question1 == "Buon giorno") {
+                correct++;
+            }
+            if (question1 == "buon giorno") {
+                correct++;
+            }
+            if (question1 == "Buon Giorno") {
+                correct++;
+            }
+            if (question2 == "Tanti auguri") {
+                correct++;
+            }
+
+            if (question3 == "skilo") {
+                correct++;
+            }
+            if (question4 == "01:50") {
+                correct++;
+            }
+
+            if (question5 == "La camicia") {
+                correct++;
+            }
+            if (question5 == "la camicia") {
+                correct++;
+            }
+            if (question5 == "La Camicia") {
+                correct++;
+            }
+
+            if (question6 == "balcone") {
+                correct++;
+            }
+
+            if (question7 == "Ομπρέλα") {
+                correct++;
+            }
+
+            if (question8 == "Θα πάω στο σπίτι μου") {
+                correct++;
+            }
+            if (question8 == "θα πάω στο σπίτι μου") {
+                correct++;
+            }
+            if (question8 == "Θα Πάω Στο Σπίτι Μου") {
+                correct++;
+            }
+
+            if (question9 == "La corona") {
+                correct++;
+            }
+
+            if (question10 == "Dipingo") {
+                correct++;
+            }
+            if (question10 == "dipingo") {
+                correct++;
+            }
+
+            var message = ["Συγχαρητήρια τα πήγες τέλεια", "Πολύ καλά", " Καλή προσπάθεια", "Μάλλον χρειάζεσαι μια επανάληψη", "Χρειάζεσαι λίγο εξάσκηση ακόμα"]
+
+            var range;
+            if (correct == 0) {
+                range = 4;
+            }
+            if (correct == 1) {
+                range = 4;
+            }
+            if (correct == 2) {
+                range = 3;
+            }
+            if (correct == 3) {
+                range = 3;
+            }
+            if (correct == 4) {
+                range = 2;
+            }
+            if (correct == 5) {
+                range = 2;
+            }
+            if (correct == 6) {
+                range = 2;
+            }
+            if (correct == 7) {
+                range = 1;
+            }
+            if (correct == 8) {
+                range = 1;
+            }
+            if (correct == 9) {
+                range = 0;
+            }
+            if (correct == 10) {
+                range = 0;
+            }
+
+            document.getElementById("after_submit").style.visibility = "visible";
+
+            document.getElementById("message").innerHTML = message[range];
+            document.getElementById("number_correct").innerHTML = "Έχεις " + correct + " σωστές απαντήσεις.";
+            document.getElementById("picture").src = pictures[range];
+        }
+    </script>
+</body>
+</html>

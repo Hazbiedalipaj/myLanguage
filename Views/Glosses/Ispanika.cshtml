@@ -1,0 +1,753 @@
+﻿@model MyLanguage__.Models.Glosses
+@{
+    ViewBag.Title = "Ispanika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <style>
+        .mySlides {
+            display: none;
+        }
+        body {
+            background-color: #D2B48C;
+        }
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 50px;
+            font-style: italic;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: antiquewhite;
+        }
+
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+            .accordion:after {
+                content: '\002B';
+                color: #777;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-content w3-section" style="max-width:100%">
+        <img class="mySlides" src="~/xwres/spain/sagrada_familia.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/spain/el_escorial.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/spain/alhambra.jpg" style="width:1200px;height:500px;">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
+    <br /><br />
+    <button class="accordion">Αλφάβητο</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>A     a</td>
+                <td>B     b</td>
+                <td>C     c</td>
+                <td>Ch    ch</td>
+                <td>D     d</td>
+                <td>E     e</td>
+
+            </tr>
+            <tr>
+                <td>F     f</td>
+                <td>G     g</td>
+                <td>H     h</td>
+                <td>I     i</td>
+                <td>J     j</td>
+                <td>K     k</td>
+
+            </tr>
+            <tr>
+                <td>L     l</td>
+                <td>Ll    ll</td>
+                <td>M     m</td>
+                <td>N     n</td>
+                <td>Ñ     ñ</td>
+                <td>O     o</td>
+
+            </tr>
+            <tr>
+                <td>P     p</td>
+                <td>Q     q</td>
+                <td>R     r</td>
+                <td>S     s</td>
+                <td>T     t</td>
+                <td>U     u</td>
+
+            </tr>
+            <tr>
+                <td>V     v</td>
+                <td>W    w</td>
+                <td>X     x</td>
+                <td>Y     y</td>
+                <td>Z     z</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Χαιρετισμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Hola!</td>
+                <td>Γεια σου!</td>
+            </tr>
+            <tr>
+                <td>Buenos días!</td>
+                <td>Καλημέρα!</td>
+            </tr>
+            <tr>
+                <td>Buenas trades!</td>
+                <td>Καλησπέρα!</td>
+            </tr>
+            <tr>
+                <td>Bonas noches!</td>
+                <td>Καληνύχτα!</td>
+            </tr>
+            <tr>
+                <td>Adiós / Hasta luego /  Nos vemos </td>
+                <td>Αντίο</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ευχές</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>¡Felicitaciones</td>
+                <td>Συγχαρητήρια!</td>
+            </tr>
+            <tr>
+                <td>¡Felices Pascuas</td>
+                <td>Καλό Πάσχα!</td>
+            </tr>
+            <tr>
+                <td>Buena navidad  </td>
+                <td>Καλά Χριστούγεννα!</td>
+            </tr>
+            <tr>
+                <td>¡Feliz Año Nuevo!</td>
+                <td>Καλή χρονιά!</td>
+            </tr>
+            <tr>
+                <td>Buena suerte </td>
+                <td>Kαλή τύχη</td>
+            </tr>
+            <tr>
+                <td>Buen viaje  </td>
+                <td>Καλό ταξίδι</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <button class="accordion">Αριθμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Cero</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Uno</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Dos</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Tres</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Cuatro</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Cinco</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Seis</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Siete</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Ocho</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Nueve</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Diez</td>
+                <td>10</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ζώα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>El gato</td>
+                <td>Η γάτα</td>
+            </tr>
+            <tr>
+                <td>El perro</td>
+                <td>Ο σκύλος</td>
+            </tr>
+            <tr>
+                <td>El gallina</td>
+                <td>Η κότα</td>
+            </tr>
+            <tr>
+                <td>El ganado</td>
+                <td>Το μοσχάρι</td>
+            </tr>
+            <tr>
+                <td>El caballo</td>
+                <td>Το άλογο</td>
+            </tr>
+            <tr>
+                <td>El puerco</td>
+                <td>Το γουρούνι</td>
+            </tr>
+            <tr>
+                <td>El conejo</td>
+                <td>Το κουνέλι</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρούχα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>La blusa</td>
+                <td>Η μπλούζα</td>
+            </tr>
+            <tr>
+                <td>El vestido</td>
+                <td>Το φόρεμα</td>
+            </tr>
+            <tr>
+                <td>La chaqueta</td>
+                <td>Το μπουφάν</td>
+            </tr>
+            <tr>
+                <td>La camisa</td>
+                <td>Το πουκάμισο</td>
+            </tr>
+            <tr>
+                <td>La falda</td>
+                <td>Η φούστα</td>
+            </tr>
+            <tr>
+                <td>El suéter</td>
+                <td>Το πουλόβερ</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <button class="accordion">Χρώματα</button>
+    <div class="panel">
+        <table>
+
+            <tr>
+                <td>Rojo</td>
+                <td>Κόκκινο</td>
+            </tr>
+            <tr>
+                <td>Rosa</td>
+                <td>Ρόζ</td>
+            </tr>
+            <tr>
+                <td>Azul</td>
+                <td>Μπλε</td>
+            </tr>
+            <tr>
+                <td>Verde</td>
+                <td>Πράσινο</td>
+            </tr>
+            <tr>
+                <td>Blanco</td>
+                <td>Άσπρο</td>
+            </tr>
+            <tr>
+                <td>Negro</td>
+                <td>Μάυρο</td>
+            </tr>
+            <tr>
+                <td>Gris</td>
+                <td>Γκρι</td>
+            </tr>
+            <tr>
+                <td>Amarillo</td>
+                <td>Κίτρινο</td>
+            </tr>
+            <tr>
+                <td>Naranja</td>
+                <td>Πορτοκαλί</td>
+            </tr>
+            <tr>
+                <td>Marrón</td>
+                <td>Καφέ</td>
+            </tr>
+            <tr>
+                <td>Mauve</td>
+                <td>Μόβ</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Οικογένια</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>La madre</td>
+                <td>Η μαμά</td>
+            </tr>
+            <tr>
+                <td>El padre</td>
+                <td>Ο μπαμπάς</td>
+            </tr>
+            <tr>
+                <td>La hermana</td>
+                <td>Η αδερφή</td>
+            </tr>
+            <tr>
+                <td>Le hermano</td>
+                <td>Ο αδερφός</td>
+            </tr>
+            <tr>
+                <td>El abuelo</td>
+                <td>Ο παπούς</td>
+            </tr>
+            <tr>
+                <td>La abuela</td>
+                <td>Η γιάγια</td>
+            </tr>
+            <tr>
+                <td>El hijo</td>
+                <td>Ο γιός</td>
+            </tr>
+            <tr>
+                <td>La hija</td>
+                <td>Η κόρη</td>
+            </tr>
+            <tr>
+                <td>El sobrino</td>
+                <td>Ο ανιψιός</td>
+            </tr>
+            <tr>
+                <td>La sabrina</td>
+                <td>Η ανιψιά</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Σπίτι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>La salon</td>
+                <td>Το σαλόνι</td>
+            </tr>
+            <tr>
+                <td>El ventana</td>
+                <td>Το παράθυρο</td>
+            </tr>
+            <tr>
+                <td>El puerta</td>
+                <td>Η πόρτα</td>
+            </tr>
+            <tr>
+                <td>El cocina</td>
+                <td>Η κουζίνα</td>
+            </tr>
+            <tr>
+                <td>La balcon</td>
+                <td>Το μπαλκόνι</td>
+            </tr>
+            <tr>
+                <td>El habitacion</td>
+                <td>Το δωμάτιο</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αθλήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>El voleibol </td>
+                <td>Το βόλλεϊ</td>
+            </tr>
+            <tr>
+                <td>El balonmano</td>
+                <td>Το χάντμπολ</td>
+            </tr>
+            <tr>
+                <td>El tenis </td>
+                <td>Το τένις</td>
+            </tr>
+            <tr>
+                <td>El tenis de mesa </td>
+                <td>Το πινγκ πονγκ</td>
+            </tr>
+            <tr>
+                <td>El polo aquático  </td>
+                <td>Η υδατοσφαίριση</td>
+            </tr>
+            <tr>
+                <td>El lanzamiento de disco  </td>
+                <td>Η δισκοβολία</td>
+            </tr>
+            <tr>
+                <td>El lanzamiento de jabalina  </td>
+                <td>Ο ακοντισμός</td>
+            </tr>
+            <tr>
+                <td>El lanzamiento de peso   </td>
+                <td>Η σφαιροβολία</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Τεχνολογία</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>El móvil</td>
+                <td>Το κινητό</td>
+            </tr>
+            <tr>
+                <td>La computadora</td>
+                <td>Ο υπολογιστής</td>
+            </tr>
+            <tr>
+                <td>El teclado</td>
+                <td>Το πληκτρολόγιο</td>
+            </tr>
+            <tr>
+                <td>El radio</td>
+                <td>Το ραδιόφωνο</td>
+            </tr>
+            <tr>
+                <td>La televisión</td>
+                <td>Το τηλεόραση</td>
+            </tr>
+            <tr>
+                <td>La camara</td>
+                <td>Η κάμερα</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Φύσι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>La flor</td>
+                <td>Το λουλούδι</td>
+            </tr>
+            <tr>
+                <td>El arbol</td>
+                <td>Το δέντρο</td>
+            </tr>
+            <tr>
+                <td>El bosque</td>
+                <td>Το δάσος</td>
+            </tr>
+            <tr>
+                <td>El rio</td>
+                <td>Το ποτάμι</td>
+            </tr>
+            <tr>
+                <td>La lago</td>
+                <td>Η λίμνη</td>
+            </tr>
+            <tr>
+                <td>El montaña</td>
+                <td>Το βουνό</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αντικείμενα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>La bombilla</td>
+                <td>Η λάμπα</td>
+            </tr>
+            <tr>
+                <td>El libro</td>
+                <td>Το βιβλίο</td>
+            </tr>
+            <tr>
+                <td>La llave</td>
+                <td>Το κλειδί</td>
+            </tr>
+            <tr>
+                <td>El paraguas</td>
+                <td>Η ομπρέλα</td>
+            </tr>
+            <tr>
+                <td>El balón</td>
+                <td>Η μπάλα</td>
+            </tr>
+            <tr>
+                <td>El peine</td>
+                <td>Η χτένα</td>
+            </tr>
+            <tr>
+                <td>El léxico</td>
+                <td>Το λεξικό</td>
+            </tr>
+            <tr>
+                <td>La batidora</td>
+                <td>Το μίξερ</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Yo juego</td>
+                <td>Παίζω</td>
+            </tr>
+            <tr>
+                <td>Yo leo</td>
+                <td>Διαβάζω</td>
+            </tr>
+            <tr>
+                <td>Yo cantando</td>
+                <td>Τραγουδάω</td>
+            </tr>
+            <tr>
+                <td>Yo bailo</td>
+                <td>Χορεύω</td>
+            </tr>
+            <tr>
+                <td>Yo escribo</td>
+                <td>Γράφω</td>
+            </tr>
+            <tr>
+                <td>Yo cocinar</td>
+                <td>Μαγιρεύω</td>
+            </tr>
+            <tr>
+                <td>Yo oigo</td>
+                <td>Ακούω</td>
+            </tr>
+            <tr>
+                <td>Yo pinto</td>
+                <td>Ζωγραφίζω</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <button class="accordion">Ώρα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>La una en punto </td>
+                <td>01:00</td>
+            </tr>
+            <tr>
+                <td>La una y cinc</td>
+                <td>01:05</td>
+            </tr>
+            <tr>
+                <td>La una y diez </td>
+                <td>01:10</td>
+            </tr>
+            <tr>
+                <td>La una y cuarto </td>
+                <td>01:15</td>
+            </tr>
+            <tr>
+                <td>La una y veinte</td>
+                <td>01:20</td>
+            </tr>
+            <tr>
+                <td>La una y veinticinco </td>
+                <td>01:25</td>
+            </tr>
+            <tr>
+                <td>La una y media </td>
+                <td>01:30</td>
+            </tr>
+            <tr>
+                <td>Las dos menos veinticinco </td>
+                <td>01:35</td>
+            </tr>
+            <tr>
+                <td>Las dos menos veinte </td>
+                <td>01:40</td>
+            </tr>
+            <tr>
+                <td>Las dos menos cuarto </td>
+                <td>01:45</td>
+            </tr>
+            <tr>
+                <td>Las dos menos diez </td>
+                <td>01:50</td>
+            </tr>
+            <tr>
+                <td>Las dos menos cinco</td>
+                <td>01:55</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ερωτήσεις/Απαντήσεις</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>¿Cómo te llamas? </td>
+                <td>Πώς σε λένε </td>
+            </tr>
+            <tr>
+                <td>Me llamo ....  </td>
+                <td>Με λένε ....</td>
+            </tr>
+            <tr>
+                <td>Cuantos años tienes</td>
+                <td>Πόσο χρονών είσαι</td>
+            </tr>
+            <tr>
+                <td>Tengo .... años </td>
+                <td>Εγω είμαι .... χρονών</td>
+            </tr>
+            <tr>
+                <td>¿Como estas?  </td>
+                <td>Πώς είσαι;  </td>
+            </tr>
+            <tr>
+                <td>(Muy) Bien / (Muy) Mal  </td>
+                <td>(Πολύ) Καλά / (Πολύ) άσχημα </td>
+            </tr>
+            <tr>
+                <td>Cuanto cuesta  </td>
+                <td>Πόσο κοστίζει  </td>
+            </tr>
+            <tr>
+                <td>Esto cuesta .... euros </td>
+                <td>Αυτό κοστίζει .... ευρω</td>
+            </tr>
+            <tr>
+                <td>A donde iras  </td>
+                <td>Πού θα πας  </td>
+            </tr>
+            <tr>
+                <td>Iré a mi casa </td>
+                <td> Εγώ θα πάω στο σπίτι μου</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+

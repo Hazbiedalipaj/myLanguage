@@ -1,0 +1,860 @@
+﻿@model MyLanguage__.Models.Glosses
+@{
+    ViewBag.Title = "Kinezika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <style>
+        .mySlides {
+            display: none;
+        }
+        body {
+            background-color: #D2B48C;
+        }
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 50px;
+            font-style: italic;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: antiquewhite;
+        }
+
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+            .accordion:after {
+                content: '\002B';
+                color: #777;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-content w3-section" style="max-width:100%">
+        <img class="mySlides" src="~/xwres/china/great_wall_of_china.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/china/forbidden_city.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/china/longji_terraces.jpg" style="width:1200px;height:500px;">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
+    <br /><br />
+    <button class="accordion">Αλφάβητο</button>
+    <div class="panel">
+        <p>Φωνήεντα</p>
+        阿(a)  哦(o)  俄(e)  艾(ai)  黑(ei)  凹(ao)  偶(ou)  安(an)  恩(en)
+        昂(ang)  冷(eng)  二(er)  中(ong)  一(yi)  也(ye)  又(you)  言(yan)  音(yin)  英(ying)  五(wu)  我(wo)  位(wei)  完(wan)  文(wen)  翁(weng)  玉(yu)  月(yue)  元(yuan) 云(yun)  用(yong) <br /><br />
+
+        <p>Σύμφωνα</p>
+        玻(bο)  婆(po)  末(mo)  封(feng)  丟(diu)  兌(dui)  特(te)  女(nü)  旅(lü)  歌儿(ger)  可(ke)  何(he)  件(jian)  窘(jiong)  秦(qin)  宣(xuan)  哲(zhe)  之(zhi)  扯(che)  赤(chi)  社(she)  是(shi)  惹(re)  日(ri)  仄(ze)  左(zuo)  字(zi)  策(ce)  次(ci)  色(se)  斯(si) <br />
+
+        <br /><p>Τόνοι</p>
+        媽/妈(mā/mā)   麻/麻(má/má)   馬/马(mă/mă)   罵/骂(mà/mà)   [παραδοσιακά / απλοποιημένα]
+        <br /> μαμά                   κάνναβη              άλογο                    κατάρα
+
+
+    </div>
+
+    <button class="accordion">Χαιρετισμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>你好</td>
+                <td>Γεια σου</td>
+            </tr>
+            <tr>
+                <td>您好</td>
+                <td>Γεια σας</td>
+            </tr>
+            <tr>
+                <td>上午好</td>
+                <td>Καλημέρα!</td>
+            </tr>
+            <tr>
+                <td>下午好</td>
+                <td>Καλησπέρα!</td>
+            </tr>
+            <tr>
+                <td>晚上好</td>
+                <td>Καλό απόγευμα!</td>
+            </tr>
+
+            <tr>
+                <td>晚安 </td>
+                <td>Καληνύχτα!</td>
+            </tr>
+            <tr>
+                <td>一会儿见!</td>
+                <td>Τα λέμε σύντομα!</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ευχές</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>祝愿你... </td>
+                <td>Συγκαρητήρια για…</td>
+            </tr>
+            <tr>
+                <td>恭喜！ </td>
+                <td>Συγκαρητήρια!</td>
+            </tr>
+            <tr>
+                <td>复活节快乐！</td>
+                <td>Καλό Πάσχα!</td>
+            </tr>
+            <tr>
+                <td>谢谢... </td>
+                <td>Ευχαριστώ πολύ για…</td>
+            </tr>
+            <tr>
+                <td>新年快乐！</td>
+                <td>Καλή χρονιά!</td>
+            </tr>
+            <tr>
+                <td>生日快乐！</td>
+                <td>Χρόνια πολλά!</td>
+            </tr>
+            <tr>
+                <td>圣诞节快乐! </td>
+                <td>Καλά Χριστούγεννα!</td>
+            </tr>
+            <tr>
+                <td>早日康复</td>
+                <td>Καλή ανάρρωση</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αριθμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>零</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>一</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>二</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>三</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>四</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>五</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>六</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>七</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>八</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>九</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>十</td>
+                <td>10</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ζώα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>猫</td>
+                <td>Η γάτα</td>
+            </tr>
+            <tr>
+                <td>狗</td>
+                <td>Ο σκύλος</td>
+            </tr>
+            <tr>
+                <td>鹿</td>
+                <td>Το ελάφι</td>
+            </tr>
+            <tr>
+                <td>海豚</td>
+                <td>Το δελφίνι</td>
+            </tr>
+            <tr>
+                <td>鸭子 </td>
+                <td>Η πάπια</td>
+            </tr>
+            <tr>
+                <td>老鹰</td>
+                <td>Ο αετός</td>
+            </tr>
+            <tr>
+                <td>狐狸</td>
+                <td>Η αλεπού</td>
+            </tr>
+            <tr>
+                <td>鹅</td>
+                <td>Η χήνα</td>
+            </tr>
+            <tr>
+                <td>兔</td>
+                <td>Ο λαγός</td>
+            </tr>
+            <tr>
+                <td>狼</td>
+                <td>Ο λύκος</td>
+            </tr>
+            <tr>
+                <td>乌龟</td>
+                <td>Η χελώνα</td>
+            </tr>
+            <tr>
+                <td>熊猫</td>
+                <td>Το πάντα</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρούχα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>女衬衫 </td>
+                <td>Η Μπλούζα</td>
+            </tr>
+            <tr>
+                <td>连衣裙</td>
+                <td>Το φόρεμα</td>
+            </tr>
+            <tr>
+                <td>帽子 </td>
+                <td>Ο σκούφος</td>
+            </tr>
+            <tr>
+                <td>裙子</td>
+                <td>Η φούστα</td>
+            </tr>
+            <tr>
+                <td>手套</td>
+                <td>Το γάντι</td>
+            </tr>
+            <tr>
+                <td>鞋 </td>
+                <td>Τα παπούτσια</td>
+            </tr>
+            <tr>
+                <td>裤子 </td>
+                <td>Το παντελόνι</td>
+            </tr>
+            <tr>
+                <td>夹克</td>
+                <td>Το μπουφάν</td>
+            </tr>
+            <tr>
+                <td>毛衣</td>
+                <td>Το πουλόβερ</td>
+            </tr>
+            <tr>
+                <td>牛仔裤</td>
+                <td>Το τζιν</td>
+            </tr>
+            <tr>
+                <td>袜子 </td>
+                <td>Οι κάλτσες</td>
+            </tr>
+            <tr>
+                <td>帽子 </td>
+                <td>Το καπέλο</td>
+            </tr>
+            <tr>
+                <td>围巾 </td>
+                <td>Το κασκόλ</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <button class="accordion">Χρώματα</button>
+    <div class="panel">
+        <table>
+
+            <tr>
+                <td>红色 </td>
+                <td>Κόκκινο</td>
+            </tr>
+            <tr>
+                <td>粉色 </td>
+                <td>Ρόζ</td>
+            </tr>
+            <tr>
+                <td>蓝色 </td>
+                <td>Μπλε</td>
+            </tr>
+            <tr>
+                <td>绿色</td>
+                <td>Πράσινο</td>
+            </tr>
+            <tr>
+                <td>白色</td>
+                <td>Άσπρο</td>
+            </tr>
+            <tr>
+                <td>黑色</td>
+                <td>Μάυρο</td>
+            </tr>
+            <tr>
+                <td>灰色</td>
+                <td>Γκρι</td>
+            </tr>
+            <tr>
+                <td>黄色</td>
+                <td>Κίτρινο</td>
+            </tr>
+            <tr>
+                <td>橙色</td>
+                <td>Πορτοκαλί</td>
+            </tr>
+            <tr>
+                <td>褐色</td>
+                <td>Καφέ</td>
+            </tr>
+            <tr>
+                <td>紫色</td>
+                <td>μόβ</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Οικογένια</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>母亲 / 妈妈 </td>
+                <td>Η μαμά</td>
+            </tr>
+            <tr>
+                <td>父亲 / 爸爸 </td>
+                <td>Ο μπαμπάς</td>
+            </tr>
+            <tr>
+                <td>父母</td>
+                <td>Οι γονείς</td>
+            </tr>
+            <tr>
+                <td>爷爷 </td>
+                <td>Ο παπούς</td>
+            </tr>
+            <tr>
+                <td>祖母 </td>
+                <td>Η γιάγια</td>
+            </tr>
+            <tr>
+                <td>祖父母</td>
+                <td>Οι παππούδες</td>
+            </tr>
+            <tr>
+                <td>儿子 </td>
+                <td>Ο γιός</td>
+            </tr>
+            <tr>
+                <td>女儿 </td>
+                <td>Η κόρη</td>
+            </tr>
+            <tr>
+                <td>孩子 </td>
+                <td>Τα παιδιά</td>
+            </tr>
+            <tr>
+                <td>哥哥</td>
+                <td>Ο μεγαλύτερος αδερφός</td>
+            </tr>
+            <tr>
+                <td>弟弟 </td>
+                <td>Ο μικρότερος αδερφός</td>
+            </tr>
+            <tr>
+                <td>姐姐 </td>
+                <td>Η μεγαλύτερη αδερφή</td>
+            </tr>
+            <tr>
+                <td>妹妹</td>
+                <td>Η μικρότερη αδερφή</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Σπίτι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>房子 </td>
+                <td>Το σπίτι</td>
+            </tr>
+            <tr>
+                <td>公寓</td>
+                <td>Το διαμέρισμα</td>
+            </tr>
+            <tr>
+                <td>地下室</td>
+                <td>Το υπόγειο</td>
+            </tr>
+            <tr>
+                <td>浴室</td>
+                <td>Το μπάνιο</td>
+            </tr>
+            <tr>
+                <td>门 </td>
+                <td>Η πόρτα</td>
+            </tr>
+            <tr>
+                <td>入口</td>
+                <td>Η είσοδος</td>
+            </tr>
+            <tr>
+                <td>车库</td>
+                <td>Το γκαράζ</td>
+            </tr>
+            <tr>
+                <td>花园</td>
+                <td>Ο κήπος</td>
+            </tr>
+            <tr>
+                <td>厨房</td>
+                <td>Η κουζίνα</td>
+            </tr>
+            <tr>
+                <td>客厅</td>
+                <td>Το καθιστικό</td>
+            </tr>
+            <tr>
+                <td>厕所</td>
+                <td>Η τουαλέτα</td>
+            </tr>
+            <tr>
+                <td>楼梯</td>
+                <td>Οι σκάλες</td>
+            </tr>
+            <tr>
+                <td>窗口</td>
+                <td>Το παράθυρο</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αθλήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>田径</td>
+                <td>Το στίβο</td>
+            </tr>
+            <tr>
+                <td>球</td>
+                <td>Η μπάλα</td>
+            </tr>
+            <tr>
+                <td>篮球</td>
+                <td>Η καλαθοσφαίριση</td>
+            </tr>
+            <tr>
+                <td>击剑</td>
+                <td>Η ξιφασκία</td>
+            </tr>
+            <tr>
+                <td>武术</td>
+                <td>Οι πολεμικές τέχνες</td>
+            </tr>
+            <tr>
+                <td>摔跤</td>
+                <td>Η πάλη</td>
+            </tr>
+            <tr>
+                <td>瑜伽</td>
+                <td>Η γιόγκα</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Τεχνολογία</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>电池</td>
+                <td>Η μπαταρία</td>
+            </tr>
+            <tr>
+                <td>计算机</td>
+                <td>Ο υπολογιστής</td>
+            </tr>
+            <tr>
+                <td>笔记本电脑</td>
+                <td>Ο φορητός υπολογιστής</td>
+            </tr>
+            <tr>
+                <td>打印机</td>
+                <td>Ο εκτυπωτής</td>
+            </tr>
+            <tr>
+                <td>相机</td>
+                <td>Η κάμερα</td>
+            </tr>
+            <tr>
+                <td>遥控器</td>
+                <td>Το τηλεχειριστήριο</td>
+            </tr>
+            <tr>
+                <td>开关</td>
+                <td>Ο διακόπτης</td>
+            </tr>
+            <tr>
+                <td>电话</td>
+                <td>Το τηλέφωνο</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Φύσι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>海滩</td>
+                <td>Η παραλία</td>
+            </tr>
+            <tr>
+                <td>火</td>
+                <td>Η φωτιά</td>
+            </tr>
+            <tr>
+                <td>湖</td>
+                <td>Η λίμνη</td>
+            </tr>
+            <tr>
+                <td>山</td>
+                <td>Το βουνό</td>
+            </tr>
+            <tr>
+                <td>海洋</td>
+                <td>Ο ωκεανός</td>
+            </tr>
+            <tr>
+                <td>洞穴</td>
+                <td>Η σπηλιά</td>
+            </tr>
+            <tr>
+                <td>岩石</td>
+                <td>Ο βράχος</td>
+            </tr>
+            <tr>
+                <td>树</td>
+                <td>Το δέντρο</td>
+            </tr>
+            <tr>
+                <td>山谷</td>
+                <td>Η κοιλάδα</td>
+            </tr>
+            <tr>
+                <td>瀑布</td>
+                <td>Ο καταρράκτης</td>
+            </tr>
+            <tr>
+                <td>波浪</td>
+                <td>Το κύμα</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αντικείμενα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>毯子</td>
+                <td>Η κουβέρτα</td>
+            </tr>
+            <tr>
+                <td>书</td>
+                <td>Το βιβλίο</td>
+            </tr>
+            <tr>
+                <td>钥匙</td>
+                <td>Το κλειδί</td>
+            </tr>
+            <tr>
+                <td>梳子</td>
+                <td>Η χτένα</td>
+            </tr>
+            <tr>
+                <td>刀</td>
+                <td>Το μαχαίρι</td>
+            </tr>
+            <tr>
+                <td>镜子</td>
+                <td>Ο καθρέφτης</td>
+            </tr>
+            <tr>
+                <td>护照</td>
+                <td>Το διαβατήριο</td>
+            </tr>
+            <tr>
+                <td>相框</td>
+                <td>Η κορνίζα</td>
+            </tr>
+            <tr>
+                <td>伞</td>
+                <td>Η ομπρέλα</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>跑</td>
+                <td>Τρέχω</td>
+            </tr>
+            <tr>
+                <td>看</td>
+                <td>Βλέπω</td>
+            </tr>
+            <tr>
+                <td>去</td>
+                <td>Πηγαίνω</td>
+            </tr>
+            <tr>
+                <td>来</td>
+                <td>Έρχομαι</td>
+            </tr>
+            <tr>
+                <td>游泳</td>
+                <td>Κολυμπώ</td>
+            </tr>
+            <tr>
+                <td>唱</td>
+                <td>Τραγουδώ</td>
+            </tr>
+            <tr>
+                <td>跳舞</td>
+                <td>Χορεύω</td>
+            </tr>
+            <tr>
+                <td>做梦</td>
+                <td>Ονειρεύομαι</td>
+            </tr>
+            <tr>
+                <td>走路</td>
+                <td>Περπατάω</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ώρα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>bā diăn</td>
+                <td>08:00</td>
+            </tr>
+            <tr>
+                <td>bā diăn wǔ (fēn)</td>
+                <td>08:05</td>
+            </tr>
+            <tr>
+                <td>bā diăn shí (fēn)</td>
+                <td>08:10</td>
+            </tr>
+            <tr>
+                <td>bā diăn yī kè</td>
+                <td>08:15</td>
+            </tr>
+            <tr>
+                <td>bā diǎn èr shí (fēn)</td>
+                <td>08:20</td>
+            </tr>
+            <tr>
+                <td>bā diǎn èr shí wǔ (fēn)</td>
+                <td>08:25</td>
+            </tr>
+            <tr>
+                <td>bā diǎn bàn</td>
+                <td>08:30</td>
+            </tr>
+            <tr>
+                <td>bā diǎn sān shí wǔ (fēn)</td>
+                <td>08:35</td>
+            </tr>
+            <tr>
+                <td>bā diǎn sì shí (fēn)</td>
+                <td>08:40</td>
+            </tr>
+            <tr>
+                <td>bā diăn sān kè</td>
+                <td>08:45</td>
+            </tr>
+            <tr>
+                <td>bā diǎn wǔ shí (fēn)</td>
+                <td>08:50</td>
+            </tr>
+            <tr>
+                <td>bā diǎn wǔ shí wǔ (fēn)</td>
+                <td>08:55</td>
+            </tr>
+            <tr>
+                <td>Χρησιμοποιούμε το fēn μόνο όταν ‘γράφουμε’ την ώρα, όχι όταν την ‘λέμε’</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ερωτήσεις/Απαντήσεις</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>你贵姓大名 / 你叫什么名字?</td>
+                <td>Ποιο είναι το όνομά σου;</td>
+            </tr>
+            <tr>
+                <td>我姓 / 我叫...</td>
+                <td>
+                    τ
+                    Το όνομά μου είναι…
+                </td>
+            </tr>
+            <tr>
+                <td>你是哪国人? </td>
+                <td>Από που είσται;</td>
+            </tr>
+            <tr>
+                <td>我是 ... 人</td>
+                <td>Είμαι από…</td>
+            </tr>
+            <tr>
+                <td>你明白嗎?</td>
+                <td>Με καταλάβατε;</td>
+            </tr>
+            <tr>
+                <td>我明白</td>
+                <td>Σας καταλαβαίνω</td>
+            </tr>
+            <tr>
+                <td>我不明白 </td>
+                <td>Δεν σας καταλαβαίνω </td>
+            </tr>
+            <tr>
+                <td>這個多少錢?</td>
+                <td>Αυτο κάνει .... ευρω</td>
+            </tr>
+            <tr>
+                <td>谢谢</td>
+                <td>Ευχαριστώ</td>
+            </tr>
+            <tr>
+                <td>不用谢</td>
+                <td>Παρακαλώ</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,786 @@
+﻿@model MyLanguage__.Models.Glosses
+@{
+    ViewBag.Title = "Rosika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <style>
+        .mySlides {
+            display: none;
+        }
+        body {
+            background-color: #D2B48C;
+        }
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 50px;
+            font-style: italic;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: antiquewhite;
+        }
+
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+            .accordion:after {
+                content: '\002B';
+                color: #777;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-content w3-section" style="max-width:100%">
+        <img class="mySlides" src="~/xwres/russia/kokkini platia russia.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/russia/babushka.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/russia/hermitage_museum russia.jpg" style="width:1200px;height:500px;">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
+    <br /><br />
+    <button class="accordion">Αλφάβητο</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>A     a</td>
+                <td>Б     б</td>
+                <td>В     в</td>
+                <td>Г     г</td>
+                <td>Д     д</td>
+                <td>Е     е</td>
+
+            </tr>
+            <tr>
+                <td>Ё     ё</td>
+                <td>Ж     ж</td>
+                <td>З     з</td>
+                <td>И     и</td>
+                <td>Й      й</td>
+                <td>К      к</td>
+
+            </tr>
+            <tr>
+                <td>Л      л</td>
+                <td>М      м</td>
+                <td>Н     н</td>
+                <td>О     о</td>
+                <td>П     п</td>
+                <td>Р     р</td>
+
+            </tr>
+            <tr>
+                <td>С     с</td>
+                <td>Т     т</td>
+                <td>У      у</td>
+                <td>Ф      ф</td>
+                <td>Х     х</td>
+                <td>Ц     ц</td>
+
+            </tr>
+            <tr>
+                <td>Ч     ч</td>
+                <td>Ш     ш</td>
+                <td>Щ     щ</td>
+                <td>Ъ       </td>
+                <td>Ы       </td>
+                <td>Ь       </td>
+            </tr>
+            <tr>
+                <td>Э     э</td>
+                <td>Ю     ю</td>
+                <td>Я     я</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Χαιρετισμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Привет!</td>
+                <td>Γεια σου!</td>
+            </tr>
+            <tr>
+                <td>Здравствуйте!  </td>
+                <td>Γεια σας!</td>
+            </tr>
+            <tr>
+                <td>Доброе утро! </td>
+                <td>Καλημέρα!</td>
+            </tr>
+            <tr>
+                <td>Добрый вечер! </td>
+                <td>Καλησπέρα!</td>
+            </tr>
+            <tr>
+                <td>Спокойной ночи! </td>
+                <td>Καληνύχτα!</td>
+            </tr>
+            <tr>
+                <td>Пока!  </td>
+                <td>Αντίο</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ευχές</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Поздравляем!</td>
+                <td>Συγχαρητήρια!</td>
+            </tr>
+            <tr>
+                <td>С днем Пасхи! </td>
+                <td>Καλό Πάσχα!</td>
+            </tr>
+            <tr>
+                <td>Счастливого Нового Года и Рождества!  </td>
+                <td>Καλά Χριστούγεννα και Ευτυχισμένο το Νέο Έτος!</td>
+            </tr>
+            <tr>
+                <td>С Рождеством!   </td>
+                <td>Καλά Χριστούγεννα!</td>
+            </tr>
+            <tr>
+                <td>Счастливого Нового Года!  </td>
+                <td>Καλή χρονιά!</td>
+            </tr>
+            <tr>
+                <td>С праздником! </td>
+                <td>Kαλές γιορτές!</td>
+            </tr>
+            <tr>
+                <td>Выздоравливай скорее! </td>
+                <td>Περαστικά!</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <button class="accordion">Αριθμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>ноль</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>один</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>два</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>три</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>четыре</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>пять</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Sшесть</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>семь</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>восемь</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>девять</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>десять</td>
+                <td>10</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ζώα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Медведь</td>
+                <td>Η αρκούδα</td>
+            </tr>
+            <tr>
+                <td>Корова</td>
+                <td>Η αγελάδα</td>
+            </tr>
+            <tr>
+                <td>Осёл</td>
+                <td>Ο γάϊδαρος</td>
+            </tr>
+            <tr>
+                <td>Слон </td>
+                <td>Ο ελέφαντας</td>
+            </tr>
+            <tr>
+                <td>Лошадь</td>
+                <td>Το άλογο</td>
+            </tr>
+            <tr>
+                <td>Свинья</td>
+                <td>Το γουρούνι</td>
+            </tr>
+            <tr>
+                <td>Лев</td>
+                <td>Το λιοντάρι</td>
+            </tr>
+            <tr>
+                <td>Тигр</td>
+                <td>Ο τίγρης</td>
+            </tr>
+            <tr>
+                <td>Зебра</td>
+                <td>Η ζέβρα</td>
+            </tr>
+            <tr>
+                <td>Страус</td>
+                <td>Ο στρουθοκάμηλος</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρούχα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Блузка </td>
+                <td>Η μπλούζα</td>
+            </tr>
+            <tr>
+                <td>Платье</td>
+                <td>Το φόρεμα</td>
+            </tr>
+            <tr>
+                <td>Куртка </td>
+                <td>Το μπουφάν</td>
+            </tr>
+            <tr>
+                <td>Рубашка</td>
+                <td>Το πουκάμισο</td>
+            </tr>
+            <tr>
+                <td>Юбка</td>
+                <td>Η φούστα</td>
+            </tr>
+            <tr>
+                <td>Пальто</td>
+                <td>Το παλτό</td>
+            </tr>
+            <tr>
+                <td>Рубашка </td>
+                <td>Τα παπούτσια</td>
+            </tr>
+            <tr>
+                <td>брюки</td>
+                <td>Το παντελόνι</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <button class="accordion">Χρώματα</button>
+    <div class="panel">
+        <table>
+
+            <tr>
+                <td>Красное </td>
+                <td>Κόκκινο</td>
+            </tr>
+            <tr>
+                <td>Розовая </td>
+                <td>Ρόζ</td>
+            </tr>
+            <tr>
+                <td>Голубая </td>
+                <td>Μπλε</td>
+            </tr>
+            <tr>
+                <td>Зеленая </td>
+                <td>Πράσινο</td>
+            </tr>
+            <tr>
+                <td>Белый </td>
+                <td>Άσπρο</td>
+            </tr>
+            <tr>
+                <td>Черная </td>
+                <td>Μάυρο</td>
+            </tr>
+            <tr>
+                <td>Серая </td>
+                <td>Γκρι</td>
+            </tr>
+            <tr>
+                <td>Желтый </td>
+                <td>Κίτρινο</td>
+            </tr>
+            <tr>
+                <td>Ораньжевый </td>
+                <td>Πορτοκαλί</td>
+            </tr>
+            <tr>
+                <td>Коричневая </td>
+                <td>Καφέ</td>
+            </tr>
+            <tr>
+                <td>Фиолетовая </td>
+                <td>Μόβ</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Οικογένια</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Мать </td>
+                <td>Η μαμά</td>
+            </tr>
+            <tr>
+                <td>Отец </td>
+                <td>Ο μπαμπάς</td>
+            </tr>
+            <tr>
+                <td>Сестра </td>
+                <td>Η αδερφή</td>
+            </tr>
+            <tr>
+                <td>Брат </td>
+                <td>Ο αδερφός</td>
+            </tr>
+            <tr>
+                <td>Дедушка </td>
+                <td>Ο παπούς</td>
+            </tr>
+            <tr>
+                <td>Бабушка </td>
+                <td>Η γιάγια</td>
+            </tr>
+            <tr>
+                <td>Сын </td>
+                <td>Ο γιός</td>
+            </tr>
+            <tr>
+                <td>Дочь </td>
+                <td>Η κόρη</td>
+            </tr>
+            <tr>
+                <td>Внук </td>
+                <td>Ο εγγονός</td>
+            </tr>
+            <tr>
+                <td>Внучка </td>
+                <td>Η εγγονή</td>
+            </tr>
+            <tr>
+                <td>Зять </td>
+                <td>Ο γαμπρός</td>
+            </tr>
+            <tr>
+                <td>Невестка </td>
+                <td>Η νύφη</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Σπίτι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>гостиная </td>
+                <td>Το σαλόνι</td>
+            </tr>
+            <tr>
+                <td>окно</td>
+                <td>Το παράθυρο</td>
+            </tr>
+            <tr>
+                <td>дверь</td>
+                <td>Η πόρτα</td>
+            </tr>
+            <tr>
+                <td>кухня</td>
+                <td>Η κουζίνα</td>
+            </tr>
+            <tr>
+                <td>балкон </td>
+                <td>Το μπαλκόνι</td>
+            </tr>
+            <tr>
+                <td>комфортабельный </td>
+                <td>Ο διάδρομος</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αθλήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>футбол </td>
+                <td>Το ποδόσφαιρο</td>
+            </tr>
+            <tr>
+                <td>плавание  </td>
+                <td>Η κολύμβηση</td>
+            </tr>
+            <tr>
+                <td>бег</td>
+                <td>Το τρέξιμο</td>
+            </tr>
+            <tr>
+                <td>бейсбол</td>
+                <td>Το μπέιζμπολ</td>
+            </tr>
+            <tr>
+                <td>велоспорт </td>
+                <td>Η ποδηλασία</td>
+            </tr>
+            <tr>
+                <td>гольф  </td>
+                <td>Το γκολφ</td>
+            </tr>
+            <tr>
+                <td>серфинг  </td>
+                <td>Το σερφ</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Τεχνολογία</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>мобильный</td>
+                <td>Το κινητό</td>
+            </tr>
+            <tr>
+                <td>калькулятор</td>
+                <td>Ο υπολογιστής</td>
+            </tr>
+            <tr>
+                <td>клавиатура</td>
+                <td>Το πληκτρολόγιο</td>
+            </tr>
+            <tr>
+                <td>радио</td>
+                <td>Το ραδιόφωνο</td>
+            </tr>
+            <tr>
+                <td>телевидение</td>
+                <td>Η τηλεόραση</td>
+            </tr>
+            <tr>
+                <td>камера</td>
+                <td>Η κάμερα</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Φύσι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>цветок</td>
+                <td>Το λουλούδι</td>
+            </tr>
+            <tr>
+                <td>дерево</td>
+                <td>Το δέντρο</td>
+            </tr>
+            <tr>
+                <td>лес</td>
+                <td>Το δάσος</td>
+            </tr>
+            <tr>
+                <td>река</td>
+                <td>Το ποτάμι</td>
+            </tr>
+            <tr>
+                <td>озеро</td>
+                <td>Η λίμνη</td>
+            </tr>
+            <tr>
+                <td>гора</td>
+                <td>Το βουνό</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αντικείμενα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>лампочка </td>
+                <td>Η λάμπα</td>
+            </tr>
+            <tr>
+                <td>книга </td>
+                <td>Το βιβλίο</td>
+            </tr>
+            <tr>
+                <td>ключ </td>
+                <td>Το κλειδί</td>
+            </tr>
+            <tr>
+                <td>зонт </td>
+                <td>Η ομπρέλα</td>
+            </tr>
+            <tr>
+                <td>мяч </td>
+                <td>Η μπάλα</td>
+            </tr>
+            <tr>
+                <td>расчёска </td>
+                <td>Η χτένα</td>
+            </tr>
+            <tr>
+                <td>лексикон </td>
+                <td>Το λεξικό</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Я играю</td>
+                <td>Παίζω</td>
+            </tr>
+            <tr>
+                <td>Я читаю</td>
+                <td>Διαβάζω</td>
+            </tr>
+            <tr>
+                <td>Я пою</td>
+                <td>Τραγουδάω</td>
+            </tr>
+            <tr>
+                <td>Я танцую</td>
+                <td>Χορεύω</td>
+            </tr>
+            <tr>
+                <td>Я пишу</td>
+                <td>Γράφω</td>
+            </tr>
+            <tr>
+                <td>Я одеваюсь</td>
+                <td>Μαγιρεύω</td>
+            </tr>
+            <tr>
+                <td>Я слышу</td>
+                <td>Ακούω</td>
+            </tr>
+            <tr>
+                <td>Я рисую</td>
+                <td>Ζωγραφίζω</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <button class="accordion">Ώρα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>час один</td>
+                <td>01:00</td>
+            </tr>
+            <tr>
+                <td>час один и пять</td>
+                <td>01:05</td>
+            </tr>
+            <tr>
+                <td>час один и десять</td>
+                <td>01:10</td>
+            </tr>
+            <tr>
+                <td>час один и четверть</td>
+                <td>01:15</td>
+            </tr>
+            <tr>
+                <td>час один и рис</td>
+                <td>01:20</td>
+            </tr>
+            <tr>
+                <td>час один скажем, пять</td>
+                <td>01:25</td>
+            </tr>
+            <tr>
+                <td>час - полтора</td>
+                <td>01:30</td>
+            </tr>
+            <tr>
+                <td>час в два раза больше</td>
+                <td>01:35</td>
+            </tr>
+            <tr>
+                <td>час - две секунды</td>
+                <td>01:40</td>
+            </tr>
+            <tr>
+                <td>час два четверти</td>
+                <td>01:45</td>
+            </tr>
+            <tr>
+                <td> час от двух до десяти</td>
+                <td>01:50</td>
+            </tr>
+            <tr>
+                <td>час - два или пять</td>
+                <td>01:55</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ερωτήσεις/Απαντήσεις</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>как они говорят </td>
+                <td>Πώς σε λένε </td>
+            </tr>
+            <tr>
+                <td>они говорят </td>
+                <td>Με λένε ....</td>
+            </tr>
+            <tr>
+                <td>сколько лет вы</td>
+                <td>Πόσο χρονών είσαι</td>
+            </tr>
+            <tr>
+                <td>Мне....лет</td>
+                <td>Εγω είμαι .... χρονών</td>
+            </tr>
+            <tr>
+                <td>как дела?  </td>
+                <td>Πώς είσαι;  </td>
+            </tr>
+            <tr>
+                <td>очень хорошо </td>
+                <td>Πολύ καλά </td>
+            </tr>
+            <tr>
+                <td>сколько это стоит</td>
+                <td>Πόσο κοστίζει  </td>
+            </tr>
+            <tr>
+                <td>он стоит....евро</td>
+                <td>Αυτό κοστίζει .... ευρώ</td>
+            </tr>
+            <tr>
+                <td>что вы пойдете </td>
+                <td>Πού θα πας  </td>
+            </tr>
+            <tr>
+                <td>Я пойду домой </td>
+                <td> Εγώ θα πάω στο σπίτι μου</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

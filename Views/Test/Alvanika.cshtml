@@ -1,0 +1,229 @@
+﻿@model MyLanguage__.Models.Test
+@{
+    ViewBag.Title = "Alvanika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+<html>
+<head>
+    <style>
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 50px;
+            font-style: italic;
+        }
+        #quiz {
+            margin-left: 10px;
+            background: #d2def2;
+            padding: 20px 30px 20px 30px;
+            width: 100%;
+            border-radius: 20px;
+            float: left;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        #after_submit {
+            visibility: hidden;
+            background: #ff5459;
+            padding: 14px 20px 14px 20px;
+            width: 400px;
+            border-radius: 20px;
+            float: left;
+            margin-left: 20px;
+            font-size: 30px;
+        }
+
+        #textbox {
+            height: 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            padding-left: 5px;
+        }
+
+        #button {
+            background: green;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            font-size: 16px;
+            transition-duration: .5s;
+            margin-top: 15px
+        }
+
+            #button:hover {
+                background: white;
+                border: 1px solid green;
+                color: black;
+                cursor: pointer;
+            }
+        #mc {
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="quiz" name="quiz">
+        <br />
+        <p><b>1. Γράψε την λέξη "Καλημέρα" στα αλβανικά</b></p>
+        <input id="textbox" type="text" name="question1" /><br /><br />
+
+        <p><b>2. Πώς είναι η λέξη "Χαρούμενα Γενέθλια" στα αλβανικά</b></p><br />
+        <input type="radio" id="mc" name="question2" value="Edhe një qind vjeç" />Edhe një qind vjeç<br>
+        <input type="radio" id="mc" name="question2" value="Gëzuar ditëlindjen" />Gëzuar ditëlindjen<br>
+        <input type="radio" id="mc" name="question2" value="Gëzuar Vitin e Ri" />Gëzuar Vitin e Ri<br><br />
+
+        <p><b>3. Τι σημαίνει "Top";</b></p><br />
+        <input type="radio" id="mc" name="question3" value="Top" /><img src="~/img/top.jpg" style="width:180px;height:160px;" />
+        <input type="radio" id="mc" name="question3" value="Lule" /><img src="~/img/lule.jpg" style="width:170px;height:170px;" /><br><br />
+
+        <p><b>4. Μετάφρασε τη φράση "Si të quajnë?</b></p><br />
+        <input type="radio" id="mc" name="question4" value="Αντίο" /> Αντίο<br>
+        <input type="radio" id="mc" name="question4" value="Καλημέρα" /> Καλημέρα<br>
+        <input type="radio" id="mc" name="question4" value="Πως σε λένε" />Πως σε λένε<br><br />
+
+        <p><b>5. Γράψε την λέξη "Μαμά" στα αλβανικά</b></p><br />
+        <input id="textbox" type="text" name="question5" /><br /><br />
+
+        <p><b>6. Tι σημαίνει "Mace";</b></p><br />
+        <input type="radio" id="mc" name="question6" value="Mace" /><img src="~/img/mace.jpg" style="width:160px;height:160px;" />
+        <input type="radio" id="mc" name="question6" value="Qen" /><img src="~/img/qen.png" style="width:160px;height:160px;" /><br><br />
+
+        <p><b>7. Πώς είναι το "Ευτυχισμένο το Νέο Έτος" στα αλβανικά</b></p><br />
+        <input type="radio" id="mc" name="question7" value="Gëzuar Krishlindjet" />Gëzuar Krishlindjet<br>
+        <input type="radio" id="mc" name="question7" value="Unë jam mire" />Unë jam mire<br>
+        <input type="radio" id="mc" name="question7" value="Gëzuar Vitin e Ri" />Gëzuar Vitin e Ri<br><br />
+
+        <p><b>8. Μετάφρασε την ερώτηση "Sa vjeç je?"</b></p><br />
+        <input id="textbox" type="text" name="question8" /><br /><br />
+
+        <p><b>9. Τι σημαίνει Arush;</b></p><br />
+        <input type="radio" id="mc" name="question9" value="Arush" /><img src="~/img/arush.jpg" style="width:160px;height:160px;" />
+        <input type="radio" id="mc" name="question9" value="Qengj" /><img src="~/img/qengj.jpg" style="width:160px;height:160px;" /><br><br />
+
+        <p><b>10. Γράψε στα αλβανικά την φράση "Η ώρα είναι πέντε και τέταρτο"</b></p><br />
+        <input id="textbox" type="text" name="question10" /><br /><br />
+
+        <input id="button" type="button" value="Τέλος" onclick="check();" />
+
+    </form>
+    <div id="after_submit">
+        <p id="message"></p>
+        <p id="number_correct"></p>
+        <img id="picture" />
+    </div>
+
+    <script type="text/javascript">
+        function check() {
+            var question1 = document.quiz.question1.value;
+            var question2 = document.quiz.question2.value;
+            var question3 = document.quiz.question3.value;
+            var question4 = document.quiz.question4.value;
+            var question5 = document.quiz.question5.value;
+            var question6 = document.quiz.question6.value;
+            var question7 = document.quiz.question7.value;
+            var question8 = document.quiz.question8.value;
+            var question9 = document.quiz.question9.value;
+            var question10 = document.quiz.question10.value;
+            var correct = 0;
+            if (question1 == "Mirmëngjes") {
+                correct++;
+            }
+            if (question1 == "mirmëngjes") {
+                correct++;
+            }
+            if (question2 == "Gëzuar ditëlindjen") {
+                correct++;
+            }
+            if (question3 == "Top") {
+                correct++;
+            }
+            if (question4 == "Πως σε λένε") {
+                correct++;
+            }
+            if (question5 == "Mama") {
+                correct++;
+            }
+            if (question5 == "mama") {
+                correct++;
+            }
+            if (question6 == "Mace") {
+                correct++;
+            }
+            if (question7 == "Gëzuar Vitin e Ri") {
+                correct++;
+            }
+            if (question8 == "Πόσο χρονών είσαι;") {
+                correct++;
+            }
+            if (question8 == "πόσο χρονών είσαι;") {
+                correct++;
+            }
+            if (question8 == "Πόσο Χρονών Είσαι;") {
+                correct++;
+            }
+            if (question9 == "Arush") {
+                correct++;
+            }
+            if (question10 == "Ora është pesë e një çerek") {
+                correct++;
+            }
+            if (question10 == "ora është pesë e një çerek") {
+                correct++;
+            }
+
+
+            var message = ["Συγχαρητήρια τα πήγες τέλεια", "Πολύ καλά", " Καλή προσπάθεια", "Μάλλον χρειάζεσαι μια επανάληψη", "Χρειάζεσαι λίγο εξάσκηση ακόμα"]
+
+            var range;
+            if (correct == 0) {
+                range = 4;
+            }
+            if (correct == 1) {
+                range = 4;
+            }
+            if (correct == 2) {
+                range = 3;
+            }
+            if (correct == 3) {
+                range = 3;
+            }
+            if (correct == 4) {
+                range = 2;
+            }
+            if (correct == 5) {
+                range = 2;
+            }
+            if (correct ==6) {
+                range = 2;
+            }
+            if (correct == 7) {
+                range = 1;
+            }
+            if (correct == 8) {
+                range = 1;
+            }
+            if (correct == 9) {
+                range = 0;
+            }
+            if (correct == 10) {
+                range = 0;
+            }
+
+            document.getElementById("after_submit").style.visibility = "visible";
+
+            document.getElementById("message").innerHTML = message[range];
+            document.getElementById("number_correct").innerHTML = "Έχεις " + correct + " σωστές απαντήσεις.";
+            document.getElementById("picture").src = pictures[range];
+        }
+    </script>
+</body>
+</html>

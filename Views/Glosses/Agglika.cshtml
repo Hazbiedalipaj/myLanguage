@@ -1,0 +1,837 @@
+﻿@model MyLanguage__.Models.Glosses
+@{
+    ViewBag.Title = "Agglika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+        .mySlides {
+            display: none;
+        }
+        body {
+            background-color: #D2B48C;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 50px;
+            font-style: italic;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            /*background-color: white;*/
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: antiquewhite;
+        }
+
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+            .accordion:after {
+                content: '\002B';
+                color: #777;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-content w3-section" style="max-width:100%">
+        <img class="mySlides" src="~/xwres/england/buckingham.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/england/big ben.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/england/stonehenge.jpg" style="width:1200px;height:500px;">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
+   
+    <br /><br />
+    <button class="accordion">Αλφάβητο</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>A     a</td>
+                <td>B     b</td>
+                <td>C     c</td>
+                <td>D     d</td>
+                <td>E     e</td>
+                <td>F     f</td>
+            </tr>
+            <tr>
+                <td>G     g</td>
+                <td>H     h</td>
+                <td>I     i</td>
+                <td>J     j</td>
+                <td>K     k</td>
+                <td>L     l</td>
+            </tr>
+            <tr>
+                <td>M     m</td>
+                <td>N     n</td>
+                <td>O     o</td>
+                <td>P     p</td>
+                <td>Q     q</td>
+                <td>R     r</td>
+            </tr>
+            <tr>
+                <td>S     s</td>
+                <td>T     t</td>
+                <td>U     u</td>
+                <td>V     v</td>
+                <td>W     w</td>
+                <td>X     x</td>
+            </tr>
+            <tr>
+
+                <td>Y     y</td>
+                <td>Z     z</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Χαιρετισμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td> Hello! </td>
+                <td>Γειά!</td>
+            </tr>
+            <tr>
+                <td>Good morning!</td>
+                <td>Καλημέρα!</td>
+            </tr>
+            <tr>
+                <td>Good afternoon!</td>
+                <td>Καλησπέρα!</td>
+            </tr>
+            <tr>
+                <td>Good evening!</td>
+                <td>Καλό απόγευμα!</td>
+            </tr>
+
+            <tr>
+                <td>Goodnight!</td>
+                <td>Καληνύχτα!</td>
+            </tr>
+            <tr>
+                <td>Goodbye</td>
+                <td>Αντίο</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ευχές</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Congratulation!/ Well done!</td>
+                <td>Συγκαρητήρια!</td>
+            </tr>
+            <tr>
+                <td>Happy Easter!</td>
+                <td>Καλό Πάσχα!</td>
+            </tr>
+            <tr>
+                <td>Happy Christmas!/ Merry Christmas!</td>
+                <td>Καλά Χριστούγεννα!</td>
+            </tr>
+            <tr>
+                <td>Happy New Year! </td>
+                <td>Καλή χρονιά!</td>
+            </tr>
+            <tr>
+                <td>Happy Birthday!</td>
+                <td>Χρόνια πολλά!</td>
+            </tr>
+            <tr>
+                <td>Good Luck! </td>
+                <td>Καλή τύχη!</td>
+            </tr>
+            <tr>
+                <td>Get well soon! </td>
+                <td>Καλή ανάρρωση!</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αριθμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Zero</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>One</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Two</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Three</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Four</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Five</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Six</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Seven</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Eight</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Nine</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Ten</td>
+                <td>10</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ζώα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Cat</td>
+                <td>Η γάτα</td>
+            </tr>
+            <tr>
+                <td>Bear</td>
+                <td>Η αρκούδα</td>
+            </tr>
+            <tr>
+                <td>Bird</td>
+                <td>Το πτηνό</td>
+            </tr>
+            <tr>
+                <td>Chicken</td>
+                <td>Η κότα</td>
+            </tr>
+            <tr>
+                <td>Dog </td>
+                <td>Ο σκύλος</td>
+            </tr>
+            <tr>
+                <td>Tiger</td>
+                <td>Ο τίγρης</td>
+            </tr>
+            <tr>
+                <td>Sheep</td>
+                <td>Το πρόβατο</td>
+            </tr>
+            <tr>
+                <td>Snake</td>
+                <td>Το φίδι</td>
+            </tr>
+            <tr>
+                <td>Duck</td>
+                <td>Η πάπια</td>
+            </tr>
+            <tr>
+                <td>Elephant</td>
+                <td>Ο ελέφαντας</td>
+            </tr>
+            <tr>
+                <td>Fish</td>
+                <td>Το ψάρι</td>
+            </tr>
+            <tr>
+                <td>Horse</td>
+                <td>Το άλογο</td>
+            </tr>
+            <tr>
+                <td>Lion</td>
+                <td>Το λιοντάρι</td>
+            </tr>
+            <tr>
+                <td>Pig</td>
+                <td>Το γουρούνι</td>
+            </tr>
+            <tr>
+                <td>Rabbit</td>
+                <td>Το κουνέλι</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρούχα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Blouse </td>
+                <td>Η μπλούζα</td>
+            </tr>
+            <tr>
+                <td>Dress</td>
+                <td>Το φόρεμα</td>
+            </tr>
+            <tr>
+                <td>Suit </td>
+                <td>Το κουστούμι</td>
+            </tr>
+            <tr>
+                <td>Skirt</td>
+                <td>Η φούστα</td>
+            </tr>
+            <tr>
+                <td>Coat</td>
+                <td>Το παλτό</td>
+            </tr>
+            <tr>
+                <td>Shoes </td>
+                <td>Τα παπούτσια</td>
+            </tr>
+            <tr>
+                <td>Trouser </td>
+                <td>Το παντελόνι</td>
+            </tr>
+            <tr>
+                <td>T-shirt</td>
+                <td>Η κοντομάνικη μπλούζα</td>
+            </tr>
+            <tr>
+                <td>Pullover / jumper</td>
+                <td>Το πουλόβερ</td>
+            </tr>
+            <tr>
+                <td>Pyjama</td>
+                <td>Η πυτζάμα</td>
+            </tr>
+            <tr>
+                <td>Sock </td>
+                <td>Οι κάλτσες</td>
+            </tr>
+            <tr>
+                <td>Hat </td>
+                <td>Το καπέλο</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <button class="accordion">Χρώματα</button>
+    <div class="panel">
+        <table>
+
+            <tr>
+                <td>Red </td>
+                <td>Κόκκινο</td>
+            </tr>
+            <tr>
+                <td>Pink </td>
+                <td>Ρόζ</td>
+            </tr>
+            <tr>
+                <td>Blue </td>
+                <td>Μπλε</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>Πράσινο</td>
+            </tr>
+            <tr>
+                <td>White</td>
+                <td>Άσπρο</td>
+            </tr>
+            <tr>
+                <td>Black</td>
+                <td>Μάυρο</td>
+            </tr>
+            <tr>
+                <td>Grey</td>
+                <td>Γκρι</td>
+            </tr>
+            <tr>
+                <td>Yellow</td>
+                <td>Κίτρινο</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>Πορτοκαλί</td>
+            </tr>
+            <tr>
+                <td>Brown</td>
+                <td>Καφέ</td>
+            </tr>
+            <tr>
+                <td>Purple</td>
+                <td>μόβ</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Οικογένια</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Mother </td>
+                <td>Η μαμά</td>
+            </tr>
+            <tr>
+                <td>Father </td>
+                <td>Ο μπαμπάς</td>
+            </tr>
+            <tr>
+                <td>Sister </td>
+                <td>Η αδερφή</td>
+            </tr>
+            <tr>
+                <td>Brother </td>
+                <td>Ο αδερφός</td>
+            </tr>
+            <tr>
+                <td>Grandfather </td>
+                <td>Ο παπούς</td>
+            </tr>
+            <tr>
+                <td>Grandmother </td>
+                <td>Η γιάγια</td>
+            </tr>
+            <tr>
+                <td>Son </td>
+                <td>Ο γιός</td>
+            </tr>
+            <tr>
+                <td>Daughter </td>
+                <td>Η κόρη</td>
+            </tr>
+            <tr>
+                <td>Grandson </td>
+                <td>Ο εγγονός</td>
+            </tr>
+            <tr>
+                <td>Granddaughter</td>
+                <td>Η εγγονή</td>
+            </tr>
+            <tr>
+                <td>Uncle </td>
+                <td>Ο θείος</td>
+            </tr>
+            <tr>
+                <td>Aunt </td>
+                <td>Η θεία</td>
+            </tr>
+            <tr>
+                <td>Cousin</td>
+                <td>Ο ξάδερφος /Η ξαδέρφη</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Σπίτι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Living room </td>
+                <td>Το σαλόνι</td>
+            </tr>
+            <tr>
+                <td>Window</td>
+                <td>Το παράθυρο</td>
+            </tr>
+            <tr>
+                <td>Door</td>
+                <td>Η πόρτα</td>
+            </tr>
+            <tr>
+                <td>Kitchen</td>
+                <td>Η κουζίνα</td>
+            </tr>
+            <tr>
+                <td>Bedroom </td>
+                <td>Το υπνοδωμάτιο</td>
+            </tr>
+            <tr>
+                <td>Hallway</td>
+                <td>Ο διάδρομος</td>
+            </tr>
+            <tr>
+                <td>Bathroom</td>
+                <td>Το μπάνιο</td>
+            </tr>
+            <tr>
+                <td>Dining room </td>
+                <td>Η τραπεζαρία</td>
+            </tr>
+            <tr>
+                <td>Garage</td>
+                <td>Το γκαράζ</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αθλήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Soccer / Football </td>
+                <td>Το ποδόσφαιρο</td>
+            </tr>
+            <tr>
+                <td>Swimming</td>
+                <td>Η κολύμβηση</td>
+            </tr>
+            <tr>
+                <td>Basketball</td>
+                <td>Το μπάσκετ</td>
+            </tr>
+            <tr>
+                <td>Baseball</td>
+                <td>Το μπέιζ-μπώλ</td>
+            </tr>
+            <tr>
+                <td>Boxing</td>
+                <td>Η πυγμαχία</td>
+            </tr>
+            <tr>
+                <td>Volleyball</td>
+                <td>Το βόλεϊ</td>
+            </tr>
+            <tr>
+                <td>Tennis</td>
+                <td>Το τένις</td>
+            </tr>
+            <tr>
+                <td>Skiing</td>
+                <td>Το σκι</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Τεχνολογία</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Mobile phone</td>
+                <td>Το κινητό</td>
+            </tr>
+            <tr>
+                <td>Laptop</td>
+                <td>Το λάπτοπ</td>
+            </tr>
+            <tr>
+                <td>Printer</td>
+                <td>Ο εκτυπωτής</td>
+            </tr>
+            <tr>
+                <td>Digital camera</td>
+                <td>Η ψηφιακή κάμερα</td>
+            </tr>
+            <tr>
+                <td>Headphones</td>
+                <td>Τα ακουστικά</td>
+            </tr>
+            <tr>
+                <td>Mouse</td>
+                <td>Το ποντίκι</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Φύσι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Flower</td>
+                <td>Το λουλούδι</td>
+            </tr>
+            <tr>
+                <td>Tree</td>
+                <td>Το δέντρο</td>
+            </tr>
+            <tr>
+                <td>Forest</td>
+                <td>Το δάσος</td>
+            </tr>
+            <tr>
+                <td>Leaf</td>
+                <td>Το φύλλο</td>
+            </tr>
+            <tr>
+                <td>Bush</td>
+                <td>Ο θάμνος</td>
+            </tr>
+            <tr>
+                <td>Cave</td>
+                <td>Η σπηλιά</td>
+            </tr>
+            <tr>
+                <td>Field</td>
+                <td>Ο αγρός</td>
+            </tr>
+            <tr>
+                <td>Hills</td>
+                <td>Οι λόφοι</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αντικείμενα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Chair</td>
+                <td>Η καρέκλα</td>
+            </tr>
+            <tr>
+                <td>Book</td>
+                <td>Το βιβλίο</td>
+            </tr>
+            <tr>
+                <td>Key</td>
+                <td>Το κλειδί</td>
+            </tr>
+            <tr>
+                <td>Table</td>
+                <td>Το τραπέζι</td>
+            </tr>
+            <tr>
+                <td>Clock</td>
+                <td>Το ρολόι</td>
+            </tr>
+            <tr>
+                <td>Plate</td>
+                <td>Το πιάτο</td>
+            </tr>
+            <tr>
+                <td>Pencil</td>
+                <td>Το μολύβι</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Open</td>
+                <td>Ανοίγω</td>
+            </tr>
+            <tr>
+                <td>Ask</td>
+                <td>Ρωτάω</td>
+            </tr>
+            <tr>
+                <td>Close</td>
+                <td>Κλείνω</td>
+            </tr>
+            <tr>
+                <td>Dance</td>
+                <td>Χορεύω</td>
+            </tr>
+            <tr>
+                <td>Draw</td>
+                <td>Ζωγραφίζω</td>
+            </tr>
+            <tr>
+                <td>Drink</td>
+                <td>Πίνω</td>
+            </tr>
+            <tr>
+                <td>Eat</td>
+                <td>Τρώω</td>
+            </tr>
+            <tr>
+                <td>Laugh</td>
+                <td>Γελώ</td>
+            </tr>
+            <tr>
+                <td>Look</td>
+                <td>Κοιτώ</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ώρα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Two o’clock</td>
+                <td>02:00</td>
+            </tr>
+            <tr>
+                <td>Five past two</td>
+                <td>02:05</td>
+            </tr>
+            <tr>
+                <td>Ten past two</td>
+                <td>02:10</td>
+            </tr>
+            <tr>
+                <td>Quarter past two</td>
+                <td>02:15</td>
+            </tr>
+            <tr>
+                <td>Twenty past two</td>
+                <td>02:20</td>
+            </tr>
+            <tr>
+                <td>Twenty-five past two</td>
+                <td>02:25</td>
+            </tr>
+            <tr>
+                <td>Half past two</td>
+                <td>02:30</td>
+            </tr>
+            <tr>
+                <td>Twenty-five to three</td>
+                <td>02:35</td>
+            </tr>
+            <tr>
+                <td>Twenty to three</td>
+                <td>02:40</td>
+            </tr>
+            <tr>
+                <td>Quarter to three</td>
+                <td>02:45</td>
+            </tr>
+            <tr>
+                <td>Ten to three</td>
+                <td>02:50</td>
+            </tr>
+            <tr>
+                <td>Five to three</td>
+                <td>02:55</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ερωτήσεις/Απαντήσεις</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>What is your name? </td>
+                <td>Ποιο είναι το όνομά σου;</td>
+            </tr>
+            <tr>
+                <td>My name is… </td>
+                <td>Το όνομά μου είναι…</td>
+            </tr>
+            <tr>
+                <td>Where are you from? </td>
+                <td>Από που είσαι;</td>
+            </tr>
+            <tr>
+                <td>I am from… / I come from… </td>
+                <td>Είμαι από…</td>
+            </tr>
+            <tr>
+                <td>What is your surname?</td>
+                <td>Ποιο είναι το επίθετό σου; </td>
+            </tr>
+            <tr>
+                <td>Where do you live? </td>
+                <td>Πού μένεις;</td>
+            </tr>
+            <tr>
+                <td>How much does it cost? </td>
+                <td>Πόσο κοστίζει αυτό; </td>
+            </tr>
+            <tr>
+                <td>How much does it cost? </td>
+                <td>Αυτο κοστιζει .... ευρω</td>
+            </tr>
+            <tr>
+                <td>When is your birthday? </td>
+                <td>Πότε είναι τα γενέθλιά σου;</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

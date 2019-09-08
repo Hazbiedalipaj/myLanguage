@@ -1,0 +1,763 @@
+﻿@model MyLanguage__.Models.Glosses
+@{
+    ViewBag.Title = "Albanika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>@Model.Name</h2>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+        .mySlides {
+            display: none;
+        }
+        body {
+            background-color: #D2B48C;
+        }
+        h2 {
+            text-align: center;
+            font-weight:600;
+            font-size: 50px;
+            font-style: italic;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: antiquewhite;
+        }
+
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+            .accordion:after {
+                content: '\002B';
+                color: #777;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-content w3-section" style="max-width:100%">
+        <img class="mySlides" src="~/xwres/albania/Kalaja_e_Krujës-Krujë.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/albania/gjirokaster.jpg" style="width:1200px;height:500px;">
+        <img class="mySlides" src="~/xwres/albania/Kalaja_e_Rozafës-Shkodër.jpg" style="width:1200px;height:500px;">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
+<br /><br />
+    <button class="accordion">Αλφάβητο</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>A     a</td>
+                <td>B     b</td>
+                <td>C     c</td>
+                <td>Ç     ç</td>
+                <td>D     d</td>
+                <td>Dh     dh</td>
+            </tr>
+            <tr>
+                <td>E     e</td>
+                <td>Ë     ë</td>
+                <td>F     f</td>
+                <td>G     g</td>
+                <td>Gj     gj</td>
+                <td>H     h</td>
+            </tr>
+            <tr>
+                <td>I     i</td>
+                <td>J     j</td>
+                <td>K     k</td>
+                <td>L     l</td>
+                <td>Ll    ll</td>
+                <td>M     m</td>
+            </tr>
+            <tr>
+                <td>N     n</td>
+                <td>Nj    nj</td>
+                <td>O     o</td>
+                <td>P     p</td>
+                <td>Q     q</td>
+                <td>R     r</td>
+            </tr>
+            <tr>
+                <td>Rr    rr</td>
+                <td>S     s</td>
+                <td>Sh    sh</td>
+                <td>T     t</td>
+                <td>Th    th</td>
+                <td>U     u</td>
+            </tr>
+            <tr>
+                <td>V     v</td>
+                <td>X     x</td>
+                <td>Xh    xh</td>
+                <td>Y     y</td>
+                <td>Z     z</td>
+                <td>Zh    zh</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <button class="accordion">Χαιρετισμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Përshëndetje!</td>
+                <td>Γεια σου!</td>
+            </tr>
+            <tr>
+                <td>Mirmëngjes!</td>
+                <td>Καλημέρα!</td>
+            </tr>
+            <tr>
+                <td>Mirmbrëma!</td>
+                <td>Καλησπέρα!</td>
+            </tr>
+            <tr>
+                <td>Natën e mirë!</td>
+                <td>Καληνύχτα!</td>
+            </tr>
+            <tr>
+                <td>Mirupafshim</td>
+                <td>Αντίο</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ευχές</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Gëzuar Vitin e Ri!</td>
+                <td>Ευτυχισμένο το Νέο  Έτος!</td>
+            </tr>
+            <tr>
+                <td>Gëzuar Krishlindjet!</td>
+                <td>Καλά Χρηστούγεννα!</td>
+            </tr>
+            <tr>
+                <td>Edhe një qind vjeç!</td>
+                <td>Να τα εκατοστίσεις!</td>
+            </tr>
+            <tr>
+                <td>T'ju rrojë fëmija!</td>
+                <td>Να σας ζήσει το παιδί!</td>
+            </tr>
+            <tr>
+                <td>I fortë dhe fatlum gjatë gjithë jetës!</td>
+                <td>Δυνατός και τυχαιρός σε όλη του την ζωή!</td>
+            </tr>
+            <tr>
+                <td>Suksese!</td>
+                <td>Καλή επιτυχία!</td>
+            </tr>
+            <tr>
+                <td>Urime të përzemërta!</td>
+                <td>Θερμές ευχές!</td>
+            </tr>
+            <tr>
+                <td>Me trashëgime!</td>
+                <td>Η ώρα η καλή!</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αριθμοί</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Zero</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Një</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Dy</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Tre</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Katër</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Pesë</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Gjashtë</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Shtatë</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Tetë</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Nëntë</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Dhjet</td>
+                <td>10</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ζώα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Mace</td>
+                <td>Γάτα</td>
+            </tr>
+            <tr>
+                <td>Qën</td>
+                <td>Σκύλος</td>
+            </tr>
+            <tr>
+                <td>Mi</td>
+                <td>Ποντίκη</td>
+            </tr>
+            <tr>
+                <td>Tigër</td>
+                <td>Τίγκρι</td>
+            </tr>
+            <tr>
+                <td>Luan</td>
+                <td>Λοντάρι</td>
+            </tr>
+            <tr>
+                <td>Dele</td>
+                <td>Πρόβατο</td>
+            </tr>
+            <tr>
+                <td>Ketër</td>
+                <td>Σκίουρος</td>
+            </tr>
+            <tr>
+                <td>Peshk</td>
+                <td>Ψάρι</td>
+            </tr>
+            <tr>
+                <td>Flutur</td>
+                <td>Πεταλούδα</td>
+            </tr>
+            <tr>
+                <td>Bretkosë</td>
+                <td>Βάτραχος</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρούχα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Bluzë</td>
+                <td>Η μπλούζα</td>
+            </tr>
+            <tr>
+                <td>Pantallona</td>
+                <td>Το παντελόνι</td>
+            </tr>
+            <tr>
+                <td>Sandale</td>
+                <td>Το πέδιλο</td>
+            </tr>
+            <tr>
+                <td>Xhup / Xhiboks</td>
+                <td>Το μπουφάν</td>
+            </tr>
+            <tr>
+                <td>Këmishë</td>
+                <td>Το πουκάμισο</td>
+            </tr>
+            <tr>
+                <td>Çorape</td>
+                <td>Οι κάλτσες</td>
+            </tr>
+            <tr>
+                <td>Pallto</td>
+                <td>Το παλτό</td>
+            </tr>
+            <tr>
+                <td>Shall</td>
+                <td>Το κασκόλ</td>
+            </tr>
+            <tr>
+                <td>Dorashka</td>
+                <td>Τα γάντια</td>
+            </tr>
+            <tr>
+                <td>Kapele</td>
+                <td>Το καπέλο</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Χρώματα</button>
+    <div class="panel">
+        <table>
+
+            <tr>
+                <td>E kuqe</td>
+                <td>Κόκκινο</td>
+            </tr>
+            <tr>
+                <td>Roz</td>
+                <td>Ρόζ</td>
+            </tr>
+            <tr>
+                <td>Blu</td>
+                <td>Μπλε</td>
+            </tr>
+            <tr>
+                <td>E gjelbërt</td>
+                <td>Πράσινο</td>
+            </tr>
+            <tr>
+                <td>E bardhë</td>
+                <td>Άσπρο</td>
+            </tr>
+            <tr>
+                <td>E zezë</td>
+                <td>Μάυρο</td>
+            </tr>
+            <tr>
+                <td>Gri</td>
+                <td>Γκρι</td>
+            </tr>
+            <tr>
+                <td>E verdhe</td>
+                <td>Κίτρινο</td>
+            </tr>
+            <tr>
+                <td>Portokalli</td>
+                <td>Πορτοκαλί</td>
+            </tr>
+            <tr>
+                <td>Kafe</td>
+                <td>Καφέ</td>
+            </tr>
+            <tr>
+                <td>Lejla</td>
+                <td>Μόβ</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Οικογένια</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Mama</td>
+                <td>Η μαμά</td>
+            </tr>
+            <tr>
+                <td>Baba</td>
+                <td>Ο μπαμπάς</td>
+            </tr>
+            <tr>
+                <td>Motër</td>
+                <td>Η αδερφή</td>
+            </tr>
+            <tr>
+                <td>Vëlla</td>
+                <td>Ο αδερφός</td>
+            </tr>
+            <tr>
+                <td>Gjysh</td>
+                <td>Ο παπούς</td>
+            </tr>
+            <tr>
+                <td>Gjyshe</td>
+                <td>Η γιάγια</td>
+            </tr>
+            <tr>
+                <td>Xhaxha</td>
+                <td>Ο θείος (Από την μεριά του μπαμπά)</td>
+            </tr>
+            <tr>
+                <td>Dajë</td>
+                <td>Ο θείος (Από την μεριά της μαμάς)</td>
+            </tr>
+            <tr>
+                <td>Teze</td>
+                <td>Η θεία (Από την μεριά της μαμάς)</td>
+            <tr>
+                <td>Hallë</td>
+                <td>Η θεία (Από την μεριά του μπαμπά)</td>
+            </tr>
+
+            <tr>
+                <td>Kushuri</td>
+                <td>Ο ξάδερφος</td>
+            </tr>
+            <tr>
+                <td>Kushurirë</td>
+                <td>Η ξάδερφη</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Σπίτι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Dhomë</td>
+                <td>Το δομάτιο</td>
+            </tr>
+            <tr>
+                <td>Dhomë gjumi</td>
+                <td>Το υπνοδομάτιο</td>
+            </tr>
+            <tr>
+                <td>Salloni</td>
+                <td>Το σαλόνι</td>
+            </tr>
+            <tr>
+                <td>Koridor</td>
+                <td>Ο διάδρομος</td>
+            </tr>
+            <tr>
+                <td>Dritare</td>
+                <td>Το παράθυρο</td>
+            </tr>
+            <tr>
+                <td>Derë/Portë</td>
+                <td>Η πόρτα</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αθλήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Futboll</td>
+                <td>Το ποδόσφερο</td>
+            </tr>
+            <tr>
+                <td>Basketboll</td>
+                <td>Το μπάσκετ</td>
+            </tr>
+            <tr>
+                <td>Volejboll</td>
+                <td>Το βόλεϊ</td>
+            </tr>
+            <tr>
+                <td>Tenis</td>
+                <td>Το τένις</td>
+            </tr>
+            <tr>
+                <td>Notim</td>
+                <td>Η κολύμβηση</td>
+            </tr>
+            <tr>
+                <td>Çiklizëm</td>
+                <td>Η ποδηλασία</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Τεχνολογία</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Telefon</td>
+                <td>Το κινητό</td>
+            </tr>
+            <tr>
+                <td>Kompjuter</td>
+                <td>Ο υπολογιστής</td>
+            </tr>
+            <tr>
+                <td>Tastierë</td>
+                <td>Το πληκτρολόγιο</td>
+            </tr>
+            <tr>
+                <td>Televizor</td>
+                <td>Η τηλεόραση</td>
+            </tr>
+            <tr>
+                <td>Radio</td>
+                <td>Το ραδιόφωνο</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Φύσι</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Lule</td>
+                <td>Το λουλούδι</td>
+            </tr>
+            <tr>
+                <td>Shpellë</td>
+                <td>Η σπηλιά</td>
+            </tr>
+            <tr>
+                <td>Pemë</td>
+                <td>Το δέντρο</td>
+            </tr>
+            <tr>
+                <td>Pyll</td>
+                <td>Το δάσος</td>
+            </tr>
+            <tr>
+                <td>Lum</td>
+                <td>Το ποτάμι</td>
+            </tr>
+            <tr>
+                <td>Liqen</td>
+                <td>Η λίμνη</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Αντικείμενα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Makinë</td>
+                <td>Το αμάξι</td>
+            </tr>
+            <tr>
+                <td>Orë</td>
+                <td>Το ρολόϊ</td>
+            </tr>
+            <tr>
+                <td>Llambë</td>
+                <td>Η λάμπα</td>
+            </tr>
+            <tr>
+                <td>Libër</td>
+                <td>Το βιβλίο</td>
+            </tr>
+            <tr>
+                <td>Fletore</td>
+                <td>Το τετράδιο</td>
+            </tr>
+            <tr>
+                <td>Arush</td>
+                <td>Το αρκουδάκι</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ρήματα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Luaj</td>
+                <td>Παίζω</td>
+            </tr>
+            <tr>
+                <td>Ha</td>
+                <td>Τρώω</td>
+            </tr>
+            <tr>
+                <td>Lexoj</td>
+                <td>Διαβάζω</td>
+            </tr>
+            <tr>
+                <td>Këndoj</td>
+                <td>Τραγουδάω</td>
+            </tr>
+            <tr>
+                <td>Shkruaj</td>
+                <td>Γράφω</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ώρα</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Pesë</td>
+                <td>05:00</td>
+            </tr>
+            <tr>
+                <td>Pesë e pesë</td>
+                <td>05:05</td>
+            </tr>
+            <tr>
+                <td>Pesë e dhjetë</td>
+                <td>05:10</td>
+            </tr>
+            <tr>
+                <td>Pesë e një çerek</td>
+                <td>05:15</td>
+            </tr>
+            <tr>
+                <td>Pesë e njëzetë</td>
+                <td>05:20</td>
+            </tr>
+            <tr>
+                <td>Pesë e njëzetë e pesë</td>
+                <td>05:25</td>
+            </tr>
+            <tr>
+                <td>Pesë e njysëm</td>
+                <td>05:30</td>
+            </tr>
+            <tr>
+                <td>Gjashtë pa njëzetë e pesë</td>
+                <td>05:35</td>
+            </tr>
+            <tr>
+                <td>Gjashtë pa njëzetë</td>
+                <td>05:40</td>
+            </tr>
+            <tr>
+                <td>Gjashtë pa një çerek</td>
+                <td>05:45</td>
+            </tr>
+            <tr>
+                <td>Gjashtë pa dhjet</td>
+                <td>05:50</td>
+            </tr>
+            <tr>
+                <td>Gjashtë pa pesë</td>
+                <td>05:55</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="accordion">Ερωτήσεις/Απαντήσεις</button>
+    <div class="panel">
+        <table>
+            <tr>
+                <td>Si të quajnë ? </td>
+                <td>Πώς σε λένε </td>
+            </tr>
+            <tr>
+                <td>Më quajnë ….  </td>
+                <td>Με λένε ....</td>
+            </tr>
+            <tr>
+                <td>Sa vjeç je ?</td>
+                <td>Πόσο χρονών είσαι</td>
+            </tr>
+            <tr>
+                <td>Unë jam …. vjeç</td>
+                <td>Εγώ είμαι .... χρονών</td>
+            </tr>
+            <tr>
+                <td>Si je ?</td>
+                <td>Πώς είσαι</td>
+            </tr>
+            <tr>
+                <td>Unë jam mire </td>
+                <td>Εγώ είμαι καλά </td>
+            </tr>
+            <tr>
+                <td>Nga je ?</td>
+                <td>Από που είσαι</td>
+            </tr>
+            <tr>
+                <td>Unë jam nga ….</td>
+                <td>Εγώ είμαι από ....</td>
+            </tr>
+            <tr>
+                <td>Ku do të vesh ?</td>
+                <td>Πού θέλεις να πας</td>
+            </tr>
+            <tr>
+                <td>Dua të vete …</td>
+                <td>Θέλω να πάω ....</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

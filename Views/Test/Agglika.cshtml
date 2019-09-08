@@ -1,0 +1,234 @@
+﻿@model MyLanguage__.Models.Test
+@{
+    ViewBag.Title = "Agglika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+<html>
+<head>
+    <style>
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 50px;
+            font-style: italic;
+        }
+        #quiz {
+            margin-left: 10px;
+            background: #d2def2;
+            padding: 20px 30px 20px 30px;
+            width: 100%;
+            border-radius: 20px;
+            float: left;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        #after_submit {
+            visibility: hidden;
+            background: #ff5459;
+            padding: 14px 20px 14px 20px;
+            width: 400px;
+            border-radius: 20px;
+            float: left;
+            margin-left: 20px;
+            font-size: 30px;
+        }
+
+        #textbox {
+            height: 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            padding-left: 5px;
+        }
+
+        #button {
+            background: green;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            font-size: 16px;
+            transition-duration: .5s;
+            margin-top: 15px
+        }
+
+            #button:hover {
+                background: white;
+                border: 1px solid green;
+                color: black;
+                cursor: pointer;
+            }
+
+        #mc {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <form id="quiz" name="quiz">
+        <br />
+        <p><b>1. Γράψε την λέξη "Καλή τύχη" στα αγγλικά</b></p>
+        <input id="textbox" type="text" name="question1" /><br /><br />
+
+        <p><b>2. Πώς είναι η λέξη "φούστα" στα αγγλικά;</b></p><br />
+        <input type="radio" id="mc" name="question2" value="blouse" />blouse<br>
+        <input type="radio" id="mc" name="question2" value="trouser" />trouser<br>
+        <input type="radio" id="mc" name="question2" value="skirt" />skirt<br><br />
+
+        <p><b>3. Τι σημαίνει "sheep";</b></p><br />
+        <input type="radio" id="mc" name="question3" value="sheep" /><img src="~/img/sheep.jpg" style="width:180px;height:160px;" />
+       <input type="radio" id="mc" name="question3" value="duck" /><img src="~/img/duck.jpg" style="width:170px;height:170px;" /><br><br />
+
+        <p><b>4. Τι σημαίνει hallway;</b></p><br />
+        <input type="radio" id="mc" name="question4" value="παράθυρο" /> παράθυρο<br>
+        <input type="radio" id="mc" name="question4" value="διάδρομος" /> διάδρομος<br>
+        <input type="radio" id="mc" name="question4" value="σαλόνι" />σαλόνι<br><br />
+
+        <p><b>5. Γράψε την λέξη "κολύμπι" στα αγγλικά</b></p><br />
+        <input id="textbox" type="text" name="question5" /><br /><br />
+
+        <p><b>6. Τι σημαίνει leaf;</b></p><br />
+        <input type="radio" id="mc" name="question6" value="leaf" /><img src="~/img/leaf.jpg" style="width:160px;height:160px;" />
+        <input type="radio" id="mc" name="question6" value="tree" /><img src="~/img/tree.jpg" style="width:160px;height:160px;" /><br><br />
+
+        <p><b>7. Τι ώρα είναι το "twenty past two";</b></p><br />
+        <input type="radio" id="mc" name="question7" value="2:00" />2:00<br>
+        <input type="radio" id="mc" name="question7" value="2:40" />2:40<br>
+        <input type="radio" id="mc" name="question7" value="2:20" />2:20<br><br />
+
+        <p><b>8. Μετάφρασε τη φράση "where do you live?"</b></p><br />
+        <input id="textbox" type="text" name="question8" /><br /><br />
+
+        <p><b>9. Τι σημαίνει "plate";</b></p><br />
+        <input type="radio" id="mc" name="question9" value="plate" /><img src="~/img/plate.jpg" style="width:160px;height:160px;" />
+        <input type="radio" id="mc" name="question9" value="table" /><img src="~/img/table.jpg" style="width:160px;height:160px;" /><br><br />
+
+        <p><b>10. Πώς είναι το ρήμα "γελώ" στα αγγλικά;</b></p><br />
+        <input id="textbox" type="text" name="question10" /><br /><br />
+
+        <input id="button" type="button" value="Τέλος" onclick="check();" />
+
+    </form>
+    <div id="after_submit">
+        <p id="message"></p>
+        <p id="number_correct"></p>
+        <img id="picture" />
+    </div>
+
+    <script type="text/javascript">
+        function check() {
+            var question1 = document.quiz.question1.value;
+            var question2 = document.quiz.question2.value;
+            var question3 = document.quiz.question3.value;
+            var question4 = document.quiz.question4.value;
+            var question5 = document.quiz.question5.value;
+            var question6 = document.quiz.question6.value;
+            var question7 = document.quiz.question7.value;
+            var question8 = document.quiz.question8.value;
+            var question9 = document.quiz.question9.value;
+            var question10 = document.quiz.question10.value;
+            var correct = 0;
+            if (question1 == "Good Luck") {
+                correct++;
+            }
+            if (question1 == "good luck") {
+                correct++;
+            }
+
+            if (question2 == "skirt") {
+                correct++;
+            }
+
+            if (question3 == "sheep") {
+                correct++;
+            }
+
+            if (question4 == "διάδρομος") {
+                correct++;
+            }
+
+            if (question5 == "swimming") {
+                correct++;
+            }
+            if (question5 == "Swimming") {
+                correct++;
+            }
+
+            if (question6 == "leaf") {
+                correct++;
+            }
+
+            if (question7 == "2:20") {
+                correct++;
+            }
+
+            if (question8 == "Πού μένεις;") {
+                correct++;
+            }
+            if (question8 == "πού μένεις;") {
+                correct++;
+            }
+
+            if (question9 == "plate") {
+                correct++;
+            }
+
+            if (question10 == "laugh") {
+                correct++;
+            }
+            if (question10 == "Laugh") {
+                correct++;
+            }
+
+            var message = ["Συγχαρητήρια τα πήγες τέλεια", "Πολύ καλά", " Καλή προσπάθεια", "Μάλλον χρειάζεσαι μια επανάληψη", "Χρειάζεσαι λίγο εξάσκηση ακόμα"]
+
+            var range;
+            if (correct == 0) {
+                range = 4;
+            }
+            if (correct == 1) {
+                range = 4;
+            }
+            if (correct == 2) {
+                range = 3;
+            }
+            if (correct == 3) {
+                range = 3;
+            }
+            if (correct == 4) {
+                range = 2;
+            }
+            if (correct == 5) {
+                range = 2;
+            }
+            if (correct == 6) {
+                range = 2;
+            }
+            if (correct == 7) {
+                range = 1;
+            }
+            if (correct == 8) {
+                range = 1;
+            }
+            if (correct == 9) {
+                range = 0;
+            }
+            if (correct == 10) {
+                range = 0;
+            }
+
+            document.getElementById("after_submit").style.visibility = "visible";
+
+            document.getElementById("message").innerHTML = message[range];
+            document.getElementById("number_correct").innerHTML = "Έχεις " + correct + " σωστές απαντήσεις.";
+            document.getElementById("picture").src = pictures[range];
+        }
+    </script>
+</body>
+</html>
